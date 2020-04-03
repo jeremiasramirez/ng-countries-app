@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ROUTING } from './app.route';
 
+
+// material
+import { MatButtonModule } from "@angular/material/button";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { ROUTING } from './app.route';
   imports: [
     BrowserModule,
     ROUTING,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
