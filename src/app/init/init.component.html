@@ -1,12 +1,19 @@
+<section class=" inBottom in responsive" *ngIf="spinner.off">
+    <mat-spinner></mat-spinner>
+</section>
 
-<div class="responsive">
-  <h3 class="title text--white">The world <i class="fas fa-globe-americas letter3"></i></h3>
-</div>
+<section class="inBottom" *ngIf="!spinner.off">
 
-<div class="responsive">
-  <img src="assets/world.svg" alt="world svg image" class="medium">
-</div>
+  <div class="responsive">
+    <h3 class="title text--white">The world <i class="fas fa-globe-americas letter3"></i></h3>
+  </div>
 
-<div class="responsive">
-  <button type="button" name="button" class="btn--white minmin"  mat-button>GO <i class="fas fa-location-arrow"></i></button>
-</div>
+  <div class="responsive">
+    <img src="assets/world.svg" alt="world svg image inTop" class="medium">
+  </div>
+
+  <div class="responsive">
+    <button (click)="goHome()" type="button" name="button" class="btn--white minmin"  mat-button>GO <i class="fas fa-location-arrow"></i></button>
+  </div>
+
+</section>
