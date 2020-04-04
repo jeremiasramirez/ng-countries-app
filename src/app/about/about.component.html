@@ -1,1 +1,10 @@
-<p>about works!</p>
+
+<section class=" inBottom in responsive" *ngIf="spinner.off">
+    <mat-spinner></mat-spinner>
+</section>
+
+
+
+<div class="title letter2 inBottom" *ngIf="!spinner.off">
+  Esta es una aplicacion de prueba. No comercial.
+</div>
