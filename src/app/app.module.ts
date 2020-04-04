@@ -17,6 +17,7 @@ import { ServiceCountry } from "./services/service.country";
 // material
 import { MatButtonModule } from "@angular/material/button";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatRippleModule} from "@angular/material/core"
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     ROUTING,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatRippleModule,
     MatProgressSpinnerModule
   ],
   providers: [],
