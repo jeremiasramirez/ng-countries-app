@@ -1,7 +1,22 @@
 
 
+<br>
+<br>
+<br>
 
-
-<section class="responsive inBottom in" *ngIf="spinner.off">
+<section class=" inBottom in responsive" *ngIf="spinner.off">
     <mat-spinner></mat-spinner>
+</section>
+
+<section class="in responsiveCard ">
+
+  <div class="card inBottom" *ngFor="let card of countriesAll">
+    <div class="theme--blue-dark" style="width: 289px;">
+        <p>{{ card.name }}</p>
+    </div>
+
+        <img src={{card.flag}} alt="photo country" class="cardImage inBottom" style="width: 293px">
+
+  </div>
+
 </section>
