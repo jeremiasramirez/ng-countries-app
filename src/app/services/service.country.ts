@@ -15,7 +15,7 @@ export class ServiceCountry{
   public getAllCountry(){
 
     return ajax.get(this.urlAllCountries).pipe(
-      delay(1500),
+      delay(1000),
       pluck('response')
     )
 
