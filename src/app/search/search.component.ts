@@ -63,7 +63,7 @@ export class SearchComponent {
 
 
 
-     timer(2000).subscribe(timing=>{
+     timer(1000).subscribe(timing=>{
 
         this.items = []
 
