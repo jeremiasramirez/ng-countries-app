@@ -16,13 +16,14 @@ export class SearchComponent {
     off: true
   }
   public form = {
-    value : ''
+    value : null
   }
   public items : any[];
 
 
   constructor(public serv:ServiceCountry, public router:Router,public par:ActivatedRoute) {
     this.changeText();
+    this.spinnerTime()
     this.router.navigate(["search", ""])
     this.par.params.subscribe(params=>{
       this.setSearchAutomation(params.name)
@@ -32,30 +33,35 @@ export class SearchComponent {
     })
 
 
-    timer(500).subscribe(timing=>{
-
-      this.spinner.off=false
-
-    })
 
 
+
+   }
+   spinnerTime(){
+     this.spinner.off=true
+
+     setTimeout(() => {
+          this.spinner.off=false
+     }, 1000);
    }
 
    setSearchAutomation(name:string=''){
      if (name != ''){
        this.keyupSearch(name);
      }
+     else{
+       this.form.value =null
+     }
    }
    setNavigateData(data:string=''){
      this.router.navigate(["search", data])
    }
    keyupSearch(data:any=''){
-
+      this.spinnerTime()
        this.setNavigateData(data)
 
 
 
-    this.spinner.off=true
 
      timer(2000).subscribe(timing=>{
 
@@ -67,7 +73,7 @@ export class SearchComponent {
 
            this.items = resp
 
-         }, (x)=>{return}, ()=>this.spinner.off=false)
+         }, (x)=>{return})
 
 
       })
