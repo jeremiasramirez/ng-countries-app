@@ -11,3 +11,11 @@
   background-color: #eee;
   color: #333;
 }
+
+.responsiveCard{
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
