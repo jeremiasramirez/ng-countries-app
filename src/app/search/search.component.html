@@ -1,10 +1,17 @@
+<section class=" inBottom in responsive" *ngIf="spinner.off">
+    <mat-spinner></mat-spinner>
+</section>
 
-<div class="responsive resetIcon">
-    <p class="text--white resetIcon letter3">Search <i class="fas fa-search letter1"> </i></p>
-</div>
+<section class="sectionSearch inBottom" *ngIf="!spinner.off">
 
-<div class="form">
-  <input type="text" class="large"  placeholder="country name" >
-  <br>
-  <button type="button" name="button"  class="btn--search minmin" mat-button>Search <i class="resetIcon fas fa-search"></i></button>
-</div>
+  <div class="responsive resetIcon">
+      <p class="text--white resetIcon letter3">Search <i class="fas fa-search letter2"> </i></p>
+  </div>
+
+  <div class="form">
+    <input type="text" class="large"  placeholder="country name" >
+    <br>
+    <button type="button" name="button"  class="btn--search minmin" mat-button>Search <i class="resetIcon fas fa-search"></i></button>
+  </div>
+
+</section>

@@ -1,5 +1,7 @@
 import { Component} from '@angular/core';
 import { ServiceCountry} from '../services/service.country'
+import { timer} from 'rxjs'
+ 
 
 @Component({
   selector: 'app-search',
@@ -8,10 +10,12 @@ import { ServiceCountry} from '../services/service.country'
   providers: [ServiceCountry]
 })
 export class SearchComponent {
-
+  public spinner = {
+    off: true
+  }
   constructor(public serv:ServiceCountry) {
     this.serv.changeTextNamePage('Search')
-
+    timer(500).subscribe(timing=>this.spinner.off=false)
    }
 
 
