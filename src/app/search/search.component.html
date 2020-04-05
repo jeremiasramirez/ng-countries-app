@@ -7,7 +7,7 @@
 <section class="sectionSearch inBottom" >
 
   <div class="form">
-    <input #data (keyup)="keyupSearch(data.value) "type="text" class="large"  placeholder="country name" >
+    <input [value]="form.value" #data (keyup)="keyupSearch(data.value) "type="text" class="large"  placeholder="country name" >
 
   </div>
 
@@ -17,8 +17,8 @@
     <mat-spinner></mat-spinner>
 </section>
 
-<div class="alert--success inBottom min" *ngIf="items">
-  Results <i class="fas fa-check-circle resetIcon inLeft"></i>
+<div class="alert--success inBottom min" *ngIf="items && !spinner.off">
+  Results {{ items.length }} <i class="fas fa-check-circle resetIcon inLeft"></i>
 </div>
 
 <br>

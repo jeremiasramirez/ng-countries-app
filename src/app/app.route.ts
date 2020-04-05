@@ -11,6 +11,7 @@ const ROUTES : Routes = [
   {path: 'init', component: InitComponent},
   {path: 'home', component: HomeComponent},
   {path: 'search', component: SearchComponent},
+  {path: 'search/:name', component: SearchComponent},
   {path: 'all', component: AllComponent},
   {path: 'about', component: AboutComponent},
   {path: '', component: InitComponent},

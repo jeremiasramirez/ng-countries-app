@@ -5,15 +5,15 @@
 <section class="inBottom" *ngIf="!spinner.off">
 
   <div class="responsive">
-    <h3 class="title text--white">The world <i class="fas fa-globe-americas letter3"></i></h3>
+    <p class=" text--white resetIcon letter3">The world <i class="fas fa-globe-americas letter2"></i></p>
   </div>
 
-  <div class="responsive">
+  <div class="responsive" matRipple  matRippleRadius="35" >
     <img src="assets/world.svg" alt="world svg image inTop" class="medium">
   </div>
 
-  <div class="responsive">
-    <button (click)="goHome()" type="button" name="button" class="btn--white minmin"  mat-button>GO <i class="fas fa-location-arrow"></i></button>
+  <div class="responsive" >
+    <button matRipple matRippleRadius="50"  matRippleUnbounded="true" (click)="goHome()" type="button" name="button" mat-button class="btn--white minmin" >GO <i class="fas fa-location-arrow letter1"></i></button>
   </div>
 
 </section>
