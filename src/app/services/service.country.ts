@@ -6,12 +6,11 @@ import { pluck, delay } from 'rxjs/operators'
 export class ServiceCountry{
   public urlAllCountries: string = 'https://restcountries.eu/rest/v2/all'
 
+ 
 
-
-  constructor(){}
-
-
-
+  public changeTextNamePage(name:string){
+    document.getElementById('idTheme').innerText=name
+  }
   public getAllCountry(){
 
     return ajax.get(this.urlAllCountries).pipe(
