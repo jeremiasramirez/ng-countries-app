@@ -18,7 +18,8 @@ import { ServiceCountry } from "./services/service.country";
 // material
 import { MatButtonModule } from "@angular/material/button";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { MatRippleModule} from "@angular/material/core"
+import { MatRippleModule} from "@angular/material/core";
+import { ExploreComponent } from './explore/explore.component'
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatRippleModule} from "@angular/material/core"
     AllComponent,
     InitComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ExploreComponent
   ],
   imports: [
     BrowserModule,
