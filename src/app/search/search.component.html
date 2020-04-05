@@ -1,17 +1,39 @@
+
+
+<div class="responsive resetIcon">
+    <p class="text--white resetIcon letter2">Search <i class="fas fa-search letter2"> </i></p>
+</div>
+
+<section class="sectionSearch inBottom" >
+
+  <div class="form">
+    <input #data (keyup)="keyupSearch(data.value) "type="text" class="large"  placeholder="country name" >
+
+  </div>
+
+</section>
+
 <section class=" inBottom in responsive" *ngIf="spinner.off">
     <mat-spinner></mat-spinner>
 </section>
 
-<section class="sectionSearch inBottom" *ngIf="!spinner.off">
+<div class="alert--success inBottom min" *ngIf="items">
+  Results <i class="fas fa-check-circle resetIcon inLeft"></i>
+</div>
 
-  <div class="responsive resetIcon">
-      <p class="text--white resetIcon letter3">Search <i class="fas fa-search letter2"> </i></p>
+<br>
+<br>
+<section class="responsiveCard">
+
+  <div class="card inBottom" matRipple="rgba(0%, 0%, 100%, 20%)" *ngFor="let card of items">
+
+    <article class="theme--blue-dark" style="width: 289px;">
+        <p>{{ card.name }}</p>
+    </article>
+
+    <img  style="width: 289px; height=289px" src={{card.flag}} alt="photo country" class="cardImage inBottom" style="width: 293px">
+
   </div>
 
-  <div class="form">
-    <input type="text" class="large"  placeholder="country name" >
-    <br>
-    <button type="button" name="button"  class="btn--search minmin" mat-button>Search <i class="resetIcon fas fa-search"></i></button>
-  </div>
 
 </section>

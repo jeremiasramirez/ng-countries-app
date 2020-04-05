@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core"
 import { ajax } from 'rxjs/ajax'
-import { pluck, delay } from 'rxjs/operators'
+import { pluck, sampleTime, delay } from 'rxjs/operators'
 @Injectable()
 
 export class ServiceCountry{
@@ -11,7 +11,7 @@ export class ServiceCountry{
   public changeTextNamePage(name:string){
     document.getElementById('idTheme').innerText=name
   }
-  public search(name:string=null){
+  public search(name:string=''){
     // filter
     name = name.substring(0,1).toUpperCase()+name.substring(1,name.length).toLowerCase()
 

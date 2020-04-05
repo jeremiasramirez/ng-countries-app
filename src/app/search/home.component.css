@@ -1,0 +1,37 @@
+.theme--red{
+  width: auto;
+}
+ 
+.fa-circle-notch{
+   animation: colorate 1s infinite linear;
+   margin-top: 2em;
+}
+@keyframes colorate {
+   to{
+     transform: rotate(360deg);
+     transition: 1s;
+   }
+   10%{
+     color: red;
+   }
+   30%{
+     color: magenta;
+   }
+   50%{
+     color: blue;
+   }
+   80%{
+     color: orangered;
+   }
+
+   90%{
+     color: blue;
+   }
+
+}
+.container__pokemons__home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
