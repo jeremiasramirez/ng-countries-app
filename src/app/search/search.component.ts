@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { ServiceCountry} from '../services/service.country'
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css','../generalStyle/general.css'],
+  providers: [ServiceCountry]
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
-  constructor() { }
+  constructor(public serv:ServiceCountry) {
+    this.serv.changeTextNamePage('Search')
 
-  ngOnInit() {
-  }
+   }
+
 
 }

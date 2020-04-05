@@ -14,7 +14,7 @@ export class AllComponent  {
    }
    public countriesAll : any[] = []
   constructor(public countryService: ServiceCountry) {
-
+    this.countryService.changeTextNamePage('About')
     this.chargedCountries();
 
   }

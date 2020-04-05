@@ -6,4 +6,8 @@
 .minim{
   width: 200px
 }
- 
+
+.btn--search{
+  background-color: #eee;
+  color: #333;
+}
