@@ -1,0 +1,8 @@
+.img{
+  background-image: linear-gradient(to left, magenta  , purple);
+  height: 200px;
+}
+
+.sizecard{
+  width: 290px
+}

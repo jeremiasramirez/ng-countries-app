@@ -19,7 +19,9 @@ import { ServiceCountry } from "./services/service.country";
 import { MatButtonModule } from "@angular/material/button";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatRippleModule} from "@angular/material/core";
-import { ExploreComponent } from './explore/explore.component'
+import { ExploreComponent } from './explore/explore.component';
+import { RegionComponent } from './region/region.component';
+import { CountryComponent } from './country/country.component'
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { ExploreComponent } from './explore/explore.component'
     InitComponent,
     HomeComponent,
     AboutComponent,
-    ExploreComponent
+    ExploreComponent,
+    RegionComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,
