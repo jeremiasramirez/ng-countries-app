@@ -25,18 +25,24 @@ export class SearchComponent {
     this.changeText();
     this.spinnerTime()
     this.router.navigate(["search", ""])
+
     this.par.params.subscribe(params=>{
       this.setSearchAutomation(params.name)
+
+
       if(params.name){
         this.form.value = params.name;
       }
+
+
     })
 
 
-
-
-
    }
+  goExplore(){
+    this.serv.goExplore()
+  }
+
    spinnerTime(){
      this.spinner.off=true
 

@@ -1,13 +1,17 @@
 import { Injectable } from "@angular/core"
 import { ajax } from 'rxjs/ajax'
+import { Router } from "@angular/router";
 import { pluck, sampleTime, delay } from 'rxjs/operators'
+import { timer } from 'rxjs'
 @Injectable()
 
 export class ServiceCountry{
   public urlAllCountries: string = 'https://restcountries.eu/rest/v2/all'
 
-
-
+  constructor(public router:Router){}
+  goExplore(){
+     timer(800).subscribe(timing=>this.router.navigate(["explore"]))
+  }
   public changeTextNamePage(name:string){
     document.getElementById('idTheme').innerText=name
   }

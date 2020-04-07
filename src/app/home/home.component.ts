@@ -12,6 +12,9 @@ export class HomeComponent  {
   constructor(public serv:ServiceCountry) {
     this.serv.changeTextNamePage('Home')
   }
+  goExplore(){
+    this.serv.goExplore();
+  }
 
 
 
