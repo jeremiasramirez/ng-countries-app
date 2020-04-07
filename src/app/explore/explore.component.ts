@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { ServiceCountry } from "../services/service.country";
 @Component({
   selector: 'app-explore',
   templateUrl: './explore.component.html',
-  styleUrls: ['./explore.component.css']
+  styleUrls: ['./explore.component.css'],
+  providers: [ServiceCountry]
 })
-export class ExploreComponent implements OnInit {
+export class ExploreComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(public countryService:ServiceCountry) {
+      this.countryService.changeTextNamePage('Explore')
   }
+
 
 }
