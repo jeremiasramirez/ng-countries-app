@@ -22,9 +22,10 @@ export class SearchComponent {
 
 
   constructor(public serv:ServiceCountry, public router:Router,public par:ActivatedRoute) {
+      this.router.navigate(["search", ""])
     this.changeText();
     this.spinnerTime()
-    this.router.navigate(["search", ""])
+
 
     this.par.params.subscribe(params=>{
       this.setSearchAutomation(params.name)

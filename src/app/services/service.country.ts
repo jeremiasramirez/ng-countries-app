@@ -10,7 +10,7 @@ export class ServiceCountry{
 
   constructor(public router:Router){}
   goExplore(){
-     timer(800).subscribe(timing=>this.router.navigate(["explore"]))
+     timer(100).subscribe(timing=>this.router.navigate(["explore"]))
   }
   public changeTextNamePage(name:string){
     document.getElementById('idTheme').innerText=name

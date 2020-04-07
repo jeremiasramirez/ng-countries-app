@@ -1,5 +1,7 @@
 
-
+<div class="responsiveCard">
+  <h1 class="letter2 text--red">Choose a language</h1>
+</div>
 
 <section class=" inBottom responsive" *ngIf="spinner.off">
     <mat-spinner></mat-spinner>
@@ -8,14 +10,14 @@
 
 <section *ngIf="!spinner.off" class="inBottom responsiveCard">
 
-  <article class="card" matRipple >
+  <article class="card" matRipple (click)="toUs()">
     <div class="theme--red sizecard" >
       <p>US</p>
     </div>
     <img src="assets/band/us.webp" alt="US" class="card--img">
   </article>
 
-  <article class="card" matRipple >
+  <article class="card" matRipple (click)="toEs()">
     <div class="theme--red sizecard" >
       <p>ES</p>
     </div>
@@ -23,9 +25,11 @@
   </article>
 
 
-  <div class="responsiveCard " >
-    <button (click)="goExplore()" type="button" mat-flat-button class="btn--white" name="button">More <i class="fas fa-ellipsis-h"></i></button>
-  </div>
-
 
 </section>
+
+
+
+  <div class="responsiveCard inBottom" *ngIf="!spinner.off">
+    <button (click)="goExplore()" type="button" mat-flat-button name="button">More <i class="fas fa-ellipsis-h"></i></button>
+  </div>

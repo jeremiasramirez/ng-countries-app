@@ -19,3 +19,7 @@
   flex-wrap: wrap;
 
 }
+
+.card--img{
+  height: 200px;
+}

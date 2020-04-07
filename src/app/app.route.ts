@@ -6,15 +6,23 @@ import { InitComponent } from './init/init.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ExploreComponent } from './explore/explore.component'
+import { RegionComponent } from './region/region.component';
+import { CountryComponent } from './country/country.component'
 
 const ROUTES : Routes = [
 
   {path: 'init', component: InitComponent},
   {path: 'home', component: HomeComponent},
+
   {path: 'search', component: SearchComponent},
   {path: 'search/:name', component: SearchComponent},
+
   {path: 'all', component: AllComponent},
+
   {path: 'explore', component: ExploreComponent},
+  {path: 'explore/:region', component: RegionComponent},
+  {path: 'explore/country/:country', component: CountryComponent},
+
   {path: 'about', component: AboutComponent},
   {path: '', component: InitComponent},
   {path: '**', component: InitComponent}
