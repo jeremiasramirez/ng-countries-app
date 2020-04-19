@@ -3,79 +3,92 @@
     "id": 1,
     "name" : "EU",
     "subname" :"European Union",
-    "image": "eu.png"
+    "image": "eu.png",
+    "redirect" : "eu"
   },
   {
     "id": 2,
     "name" : "EFTA",
     "subname" :"European Free Trade Association",
-    "image": "efta.png"
+    "image": "efta.png",
+    "redirect" : "efta"
   },
   {
     "id": 3,
     "name" : "CARICOM",
     "subname" :"Caribbean Community",
-    "image": "caricom.png"
+    "image": "caricom.png",
+    "redirect" : "caricom"
   },
   {
     "id": 4,
     "name" : "PA",
     "subname" :"Pacific Alliance",
-    "image": "alianzapacifico.png"
+    "image": "alianzapacifico.png",
+    "redirect" : "pa"
   },
   {
     "id": 5,
     "name" : "AU",
     "subname" :"Africa Union",
-    "image": "unionafr.jpg"
+    "image": "unionafr.jpg",
+    "redirect" : "au"
   },
   {
     "id": 6,
     "name" : "USAN",
     "subname" :"Union of South American Nations",
-    "image": "unasur.png"
+    "image": "unasur.png",
+    "redirect" : "usan"
   },
   {
     "id": 7,
     "name" : "EEU",
     "subname" :"Eurasion Economic Union",
-    "image": "eurasian.png"
+    "image": "eurasian.png",
+    "redirect" : "eeu"
   },
   {
     "id": 8,
     "name" : "AL",
     "subname" :"Arab League",
-    "image": "arableague.png"
+    "image": "arableague.png",
+    "redirect" : "al"
   },
   {
     "id": 9,
     "name" : "ASEAN",
     "subname" :"Association of Southeast Asian Nations",
-    "image": "asean.jpg"
+    "image": "asean.jpg",
+    "redirect" : "asean"
   },
   {
     "id": 10,
     "name" : "CAIS",
     "subname" :"Central American Integration System",
-    "image": "cais.png"
+    "image": "cais.png",
+    "redirect" : "cais"
   },
   {
     "id": 11,
     "name" : "CEFTA",
     "subname" :"Central European Free Trade Agreement",
-    "image": "cefta.png"
+    "image": "cefta.png",
+    "redirect" : "cefta"
   },
   {
     "id": 12,
     "name" : "NAFTA",
     "subname" :"North American Free Trade Agreement",
-    "image": "nafta.jpg"
+    "image": "nafta.jpg",
+    "redirect" : "nafta"
   },
   {
     "id": 12,
     "name" : "SAARC",
     "subname" :"South Asian Association for Regional Cooperation",
-    "image": "saarc.png"
+    "image": "saarc.png",
+    "redirect" : "saarc"
   }
 
 

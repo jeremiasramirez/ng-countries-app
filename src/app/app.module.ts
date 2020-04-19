@@ -16,6 +16,7 @@ import { ROUTING } from './app.route';
 
 // Service
 import { ServiceCountry } from "./services/service.country";
+import { ExploreService } from "./services/explore.service";
 
 
 // material
@@ -23,6 +24,7 @@ import { MatButtonModule } from "@angular/material/button";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatRippleModule} from "@angular/material/core";
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -48,7 +50,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatProgressSpinnerModule,
     ReactiveFormsModule ,
     FormsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

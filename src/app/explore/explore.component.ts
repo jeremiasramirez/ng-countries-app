@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ServiceCountry } from "../services/service.country";
+import { ExploreService } from "../services/explore.service";
+import {MatSnackBar} from '@angular/material/snack-bar';
 import { timer } from "rxjs";
 import { delay } from "rxjs/operators";
 
@@ -7,7 +9,7 @@ import { delay } from "rxjs/operators";
   selector: 'app-explore',
   templateUrl: './explore.component.html',
   styleUrls: ['./explore.component.css', '../generalStyle/general.css'],
-  providers: [ServiceCountry]
+  providers: [ServiceCountry, ExploreService]
 })
 export class ExploreComponent {
 
@@ -16,8 +18,8 @@ export class ExploreComponent {
   public spinner = {
     off:true
   }
-  constructor(public countryService:ServiceCountry) {
-
+  constructor(private _snackBar: MatSnackBar,public countryService:ServiceCountry, public exploreService:ExploreService) {
+      timer(800).subscribe(timing=>this.openSnackBar());
       this.countryService.changeTextNamePage('Explore')
       this.setAllRegionToArray();
 
@@ -27,7 +29,7 @@ export class ExploreComponent {
 
   setAllRegionToArray(){
 
-    this.countryService.getAllRegion().pipe(delay(600)).subscribe(resp=>{
+    this.exploreService.getAllRegion().pipe(delay(600)).subscribe(resp=>{
         this.allRegion = resp;
 
         console.log(this.allRegion);
@@ -36,6 +38,10 @@ export class ExploreComponent {
 
 
   }
-
+  openSnackBar(message: string, action: string) {
+      this._snackBar.open('showing all regions', 'Ok', {
+        duration: 5000,
+      });
+    }
 
 }

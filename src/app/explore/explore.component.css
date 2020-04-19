@@ -1,3 +1,6 @@
 .card{
   margin: 1em;
 }
+mat-form-field {
+  margin-right: 12px;
+}
