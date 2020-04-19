@@ -20,7 +20,7 @@ const ROUTES : Routes = [
   {path: 'all', component: AllComponent},
 
   {path: 'explore', component: ExploreComponent},
-  {path: 'explore/:region', component: RegionComponent},
+  {path: 'explore/region/:region', component: RegionComponent},
   {path: 'explore/country/:country', component: CountryComponent},
 
   {path: 'about', component: AboutComponent},

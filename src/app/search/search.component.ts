@@ -22,7 +22,7 @@ export class SearchComponent {
 
 
   constructor(public serv:ServiceCountry, public router:Router,public par:ActivatedRoute) {
-      this.router.navigate(["search", ""])
+      // this.router.navigate(["search", ""])
     this.changeText();
     this.spinnerTime()
 
