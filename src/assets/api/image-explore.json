@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "name" : "EU",
+    "subname" :"European Union",
+    "image": "eu.png"
+  },
+  {
+    "id": 2,
+    "name" : "EFTA",
+    "subname" :"European Free Trade Association",
+    "image": "efta.png"
+  },
+  {
+    "id": 3,
+    "name" : "CARICOM",
+    "subname" :"Caribbean Community",
+    "image": "caricom.png"
+  },
+  {
+    "id": 4,
+    "name" : "PA",
+    "subname" :"Pacific Alliance",
+    "image": "alianzapacifico.png"
+  },
+  {
+    "id": 5,
+    "name" : "AU",
+    "subname" :"Africa Union",
+    "image": "unionafr.jpg"
+  },
+  {
+    "id": 6,
+    "name" : "USAN",
+    "subname" :"Union of South American Nations",
+    "image": "unasur.png"
+  },
+  {
+    "id": 7,
+    "name" : "EEU",
+    "subname" :"Eurasion Economic Union",
+    "image": "eurasian.png"
+  },
+  {
+    "id": 8,
+    "name" : "AL",
+    "subname" :"Arab League",
+    "image": "arableague.png"
+  },
+  {
+    "id": 9,
+    "name" : "ASEAN",
+    "subname" :"Association of Southeast Asian Nations",
+    "image": "asean.jpg"
+  },
+  {
+    "id": 10,
+    "name" : "CAIS",
+    "subname" :"Central American Integration System",
+    "image": "cais.png"
+  },
+  {
+    "id": 11,
+    "name" : "CEFTA",
+    "subname" :"Central European Free Trade Agreement",
+    "image": "cefta.png"
+  },
+  {
+    "id": 12,
+    "name" : "NAFTA",
+    "subname" :"North American Free Trade Agreement",
+    "image": "nafta.jpg"
+  },
+  {
+    "id": 12,
+    "name" : "SAARC",
+    "subname" :"South Asian Association for Regional Cooperation",
+    "image": "saarc.png"
+  }
+
+
+
+
+]

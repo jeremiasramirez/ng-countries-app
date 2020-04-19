@@ -70,7 +70,7 @@ export class SearchComponent {
 
 
 
-     timer(1000).subscribe(timing=>{
+     timer(2000).subscribe(timing=>{
 
         this.items = []
 
