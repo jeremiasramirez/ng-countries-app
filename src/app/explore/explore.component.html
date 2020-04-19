@@ -1,1 +1,18 @@
-<p>explore works!</p>
+
+<section  class="inBottom responsiveCard">
+
+  <article class="card" matRipple *ngFor="let region of allRegion">
+    <div class="theme--red sizecard" >
+      <p>{{region.name}}</p>
+    </div>
+
+    <img src="assets/imgExplore/{{region.image}}" alt="image region" class="card--img">
+  </article>
+
+
+</section>
+
+
+<section class="inBottom responsiveCard" *ngIf="spinner.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section>

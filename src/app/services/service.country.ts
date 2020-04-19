@@ -7,8 +7,11 @@ import { timer } from 'rxjs'
 
 export class ServiceCountry{
   public urlAllCountries: string = 'https://restcountries.eu/rest/v2/all'
+  public urlAllRegion: string = 'assets/api/image-explore.json'
 
-  constructor(public router:Router){}
+  constructor(public router:Router){
+   
+  }
   goExplore(){
      timer(100).subscribe(timing=>this.router.navigate(["explore"]))
   }
@@ -28,6 +31,15 @@ export class ServiceCountry{
   public getAllCountry(){
 
     return ajax.get(this.urlAllCountries).pipe(
+      delay(1000),
+      pluck('response')
+    )
+
+  }
+
+  public getAllRegion(){
+
+    return ajax.get(this.urlAllRegion).pipe(
       delay(1000),
       pluck('response')
     )

@@ -47,7 +47,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatRippleModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule ,
-    FormsModule
+    FormsModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
