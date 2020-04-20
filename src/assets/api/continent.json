@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Africa",
+    "image": "african.png"
+  },
+  {
+    "id": 2,
+    "name": "Americas",
+    "image": "americas.png"
+  },
+  {
+    "id":3,
+    "name": "Africa",
+    "image": "african.png"
+  },
+  {
+    "id":4,
+    "name": "Asia",
+    "image": "asias.png"
+  },
+  {
+    "id": 5,
+    "name": "Europe",
+    "image": "europe.png"
+  },
+  {
+    "id": 6,
+    "name": "Oceania",
+    "image": "oceania.png"
+  },
+]

@@ -3,7 +3,7 @@
 
   <article class="card" matRipple *ngFor="let region of allRegion">
     <div class="theme--red sizecard" >
-      <p>{{region.name}}</p>
+      <p>{{region.name}} <i class="subname">({{region.subname}})</i></p>
     </div>
 
     <img src="assets/imgExplore/{{region.image}}" alt="image region" class="card--img">
