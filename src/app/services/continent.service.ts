@@ -7,11 +7,28 @@ import { timer } from 'rxjs'
 
 export class ContinentService{
 
-  // public urlContinent: string = 'https://restcountries.eu/rest/v2/lang/'
+  // public urlContinent: string = 'https://restcountries.eu/rest/v2/region/'
+  public urlAllContinent: string = 'assets/api/continent.json'
 
-  constructor(public router:Router){
+  constructor(public router:Router){  }
+  getAllContinent(){
+
+    return ajax.get(this.urlAllContinent).pipe(
+      pluck('response'),
+      delay(600)
+    )
 
   }
+/*
+  getAllContinent(name:string){
+
+    return ajax.get(`${this.urlContinent}${name}`).pipe(
+      delay(600),
+      pluck('response')
+    )
+
+  }
+  */
 
 
 

@@ -1,8 +1,26 @@
 
-<section  class="inBottom responsiveCard">
+<section class="inBottom responsiveCard" *ngIf="spinner2.off">
+    <mat-spinner></mat-spinner>
+</section>
+<section  class=" responsiveCard">
 
-  <article class="card" matRipple *ngFor="let region of allRegion">
-    <div class="theme--red sizecard" >
+  <article class="card inBottom" matRipple *ngFor="let continent of allContinent">
+    <div class="theme--blue-dark sizecard" >
+      <p>{{continent.name}}</p>
+    </div>
+
+    <img src="assets/continent/{{continent.image}}" alt="image region" class="card--img">
+  </article>
+
+
+</section>
+
+
+
+<section  class=" responsiveCard">
+
+  <article class="card inBottom" matRipple *ngFor="let region of allRegion">
+    <div class="theme--blue-dark sizecard" >
       <p>{{region.name}} <i class="subname">({{region.subname}})</i></p>
     </div>
 

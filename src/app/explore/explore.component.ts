@@ -15,21 +15,28 @@ import { delay } from "rxjs/operators";
 export class ExploreComponent {
 
   public allRegion: [];
-
+  public allContinent : [];
   public spinner = {
+    off:true
+  }
+  public spinner2 = {
     off:true
   }
   constructor(private _snackBar: MatSnackBar,public countryService:ServiceCountry,
              public exploreService:ExploreService, public continent:ContinentService) {
 
       timer(800).subscribe(timing=>this.openSnackBar('showing all regions', 'Ok'));
+      this.setAllContinent();
       this.countryService.changeTextNamePage('Explore')
       this.setAllRegionToArray();
 
 
   }
 
-
+  setAllContinent(){
+    this.continent.getAllContinent().pipe(delay(1000)).subscribe(resp => this.allContinent = resp,
+                                  (err)=>{return err}, ()=>{this.spinner2.off=false})
+  }
   setAllRegionToArray(){
 
     this.exploreService.getAllRegion().pipe(delay(600)).subscribe(resp=>{

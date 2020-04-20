@@ -7,7 +7,7 @@
   {
     "id": 2,
     "name": "Americas",
-    "image": "americas.png"
+    "image": "americas.jpg"
   },
   {
     "id":3,
@@ -22,11 +22,11 @@
   {
     "id": 5,
     "name": "Europe",
-    "image": "europe.png"
+    "image": "europe.jpg"
   },
   {
     "id": 6,
     "name": "Oceania",
     "image": "oceania.png"
-  },
+  }
 ]
