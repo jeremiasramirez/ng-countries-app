@@ -3,7 +3,7 @@ import { ServiceCountry } from "../services/service.country";
 import { ExploreService } from "../services/explore.service";
 import { ContinentService } from "../services/continent.service";
 import {MatSnackBar} from '@angular/material/snack-bar';
-import { timer } from "rxjs";
+import { timer,concat } from "rxjs";
 import { delay } from "rxjs/operators";
 
 @Component({
@@ -16,6 +16,7 @@ export class ExploreComponent {
 
   public allRegion: [];
   public allContinent : [];
+  public allElementsForSearch : []
   public spinner = {
     off:true
   }
