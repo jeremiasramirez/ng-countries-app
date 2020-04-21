@@ -22,7 +22,6 @@ export class AllComponent  {
   chargedCountries(){
 
     this.countryService.getAllCountry().subscribe((resp)=>{
-      console.log(resp);
       this.countriesAll = resp
     },
     ()=>{return},

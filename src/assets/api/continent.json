@@ -9,23 +9,19 @@
     "name": "Americas",
     "image": "americas.jpg"
   },
+
   {
     "id":3,
-    "name": "Africa",
-    "image": "african.png"
-  },
-  {
-    "id":4,
     "name": "Asia",
     "image": "asias.png"
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Europe",
     "image": "europe.jpg"
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Oceania",
     "image": "oceania.png"
   }
