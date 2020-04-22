@@ -1,19 +1,23 @@
-<section class=" inBottom in responsive" *ngIf="spinner.off">
-    <mat-spinner></mat-spinner>
-</section>
+<section class="init--container in">
 
-<section class="inBottom" *ngIf="!spinner.off">
+  <section class=" inBottom in responsive" *ngIf="spinner.off">
+      <mat-spinner></mat-spinner>
+  </section>
 
-  <div class="responsive">
-    <p class=" text--white resetIcon letter3">The world <i class="fas fa-globe-americas letter2"></i></p>
-  </div>
+  <section class="inBottom" *ngIf="!spinner.off">
 
-  <div class="responsive" matRipple  matRippleRadius="35" >
-    <img src="assets/world.svg" alt="world svg image inTop" class="medium">
-  </div>
+    <div class="responsive">
+      <p class=" text--white resetIcon letter3">The world <i class="fas fa-globe-americas letter2"></i></p>
+    </div>
 
-  <div class="responsive" >
-    <button matRipple matRippleRadius="50"  matRippleUnbounded="true" (click)="goHome()" type="button" name="button" mat-button class="btn--white minmin" >GO <i class="fas fa-location-arrow letter1"></i></button>
-  </div>
+    <div class="responsive" matRipple  matRippleRadius="35" >
+      <img src="assets/world.svg" alt="world svg image inTop" class="medium">
+    </div>
+
+    <div class="responsive" >
+      <button matRipple matRippleRadius="50"  matRippleUnbounded="true" (click)="goHome()" type="button" name="button" mat-button class="btn--blue min" >GO <i class="fas fa-location-arrow letter1"></i></button>
+    </div>
+
+  </section>
 
 </section>
