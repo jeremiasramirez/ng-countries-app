@@ -28,12 +28,16 @@ export class SearchComponent {
     this.theme.setColorTheme("theme--blue-dark", "menu--blue-dark")
 
     this.par.params.subscribe(params=>{
-      this.setSearchAutomation(params.name)
 
 
-      if(params.name){
-        this.form.value = params.name;
-      }
+        this.setSearchAutomation(params.name)
+
+
+        if(params.name){
+          this.form.value = params.name;
+        }
+
+
 
 
     })
@@ -64,6 +68,7 @@ export class SearchComponent {
      this.router.navigate(["search", data])
    }
    keyupSearch(data:any=''){
+       if (data.length >= 3){
       this.spinnerTime()
       this.spinner.off=true
        this.setNavigateData(data)
@@ -73,11 +78,11 @@ export class SearchComponent {
 
      timer(2000).subscribe(timing=>{
 
-        this.items = []
+        // this.items = []
 
          this.serv.search(data).pipe(
 
-         ).subscribe(resp=>{
+         ).pipe(delay(1000)).subscribe(resp=>{
 
            this.items = resp
 
@@ -86,7 +91,7 @@ export class SearchComponent {
 
       })
 
-
+}
 
    }
 
