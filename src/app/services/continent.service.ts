@@ -16,7 +16,7 @@ export class ContinentService{
 
     return ajax.get(this.urlAllContinent).pipe(
       pluck('response'),
-      delay(600)
+      delay(100)
     )
 
   }

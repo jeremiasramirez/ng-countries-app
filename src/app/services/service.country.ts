@@ -10,7 +10,7 @@ export class ServiceCountry{
   public urlAllRegion: string = 'assets/api/image-explore.json'
 
   constructor(public router:Router){
-   
+
   }
   goExplore(){
      timer(100).subscribe(timing=>this.router.navigate(["explore"]))
@@ -24,14 +24,14 @@ export class ServiceCountry{
 
     return ajax.get(`https://restcountries.eu/rest/v2/name/${name}`).pipe(
       pluck('response'),
-      delay(800)
+      delay(100)
     )
 
   }
   public getAllCountry(){
 
     return ajax.get(this.urlAllCountries).pipe(
-      delay(1000),
+      delay(100),
       pluck('response')
     )
 
@@ -40,7 +40,7 @@ export class ServiceCountry{
   public getAllRegion(){
 
     return ajax.get(this.urlAllRegion).pipe(
-      delay(1000),
+      delay(100),
       pluck('response')
     )
 

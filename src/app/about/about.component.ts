@@ -5,7 +5,7 @@ import { Theme } from "../services/theme.service";
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
+  styleUrls: ['./about.component.css', '../generalStyle/general.css'],
   providers: [ServiceCountry, Theme]
 })
 export class AboutComponent   {

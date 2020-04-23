@@ -23,3 +23,15 @@
 .card--img{
   height: 200px;
 }
+.inOut{
+  animation : outing 1s linear;
+}
+
+@keyframes outing {
+  from {
+    transform: scale(0);
+  }
+    to{
+      transform: scale(1);
+    }
+}

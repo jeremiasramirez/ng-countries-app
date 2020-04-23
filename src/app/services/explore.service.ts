@@ -17,7 +17,7 @@ export class ExploreService{
   public getAllRegion(){
 
     return ajax.get(this.urlAllRegion).pipe(
-      delay(1000),
+      delay(100),
       pluck('response')
     )
 

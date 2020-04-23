@@ -65,6 +65,7 @@ export class SearchComponent {
    }
    keyupSearch(data:any=''){
       this.spinnerTime()
+      this.spinner.off=true
        this.setNavigateData(data)
 
 
@@ -80,7 +81,7 @@ export class SearchComponent {
 
            this.items = resp
 
-         }, (x)=>{return})
+         }, (x)=>{return x}, ()=>{this.spinner.off=false})
 
 
       })
