@@ -9,6 +9,7 @@ export class ContinentService{
 
   // public urlContinent: string = 'https://restcountries.eu/rest/v2/region/'
   public urlAllContinent: string = 'assets/api/continent.json'
+  public urlAllRegion: string = 'https://restcountries.eu/rest/v2/regionalbloc/'
 
   constructor(public router:Router){  }
   getAllContinent(){
@@ -19,16 +20,16 @@ export class ContinentService{
     )
 
   }
-/*
-  getAllContinent(name:string){
 
-    return ajax.get(`${this.urlContinent}${name}`).pipe(
-      delay(600),
+  getAllContinentOfRegion(name:string){
+
+    return ajax.get(`${this.urlAllRegion}${name}`).pipe(
+      delay(100),
       pluck('response')
     )
 
   }
-  */
+
 
 
 

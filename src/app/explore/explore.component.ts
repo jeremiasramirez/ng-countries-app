@@ -5,7 +5,7 @@ import { ContinentService } from "../services/continent.service";
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { timer,concat, Subject ,from} from "rxjs";
 import { delay } from "rxjs/operators";
-
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-explore',
   templateUrl: './explore.component.html',
@@ -25,7 +25,8 @@ export class ExploreComponent {
     off:true
   }
   constructor(private _snackBar: MatSnackBar,public countryService:ServiceCountry,
-             public exploreService:ExploreService, public continent:ContinentService) {
+             public exploreService:ExploreService, public continent:ContinentService,
+              public router:Router) {
 
       timer(800).subscribe(timing=>this.openSnackBar('showing all regions', 'Ok'));
       this.setAllContinent();
@@ -58,5 +59,11 @@ export class ExploreComponent {
         duration: 5000,
       });
     }
+
+
+
+  public goToRegion(name:string){
+    this.router.navigate(["explore/region", name]);
+  }
 
 }

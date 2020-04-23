@@ -1,1 +1,13 @@
-<p>region works!</p>
+
+<section  class="responsiveCard">
+
+  <article class="card inBottom" matRipple *ngFor="let region of allCountryOfRegion.data">
+    <div class="theme--blue-dark sizecard" >
+      <p>{{region.name}}</p>
+    </div>
+
+    <img src="{{region.flag}}" alt="image region" class="card--img">
+  </article>
+
+
+</section>

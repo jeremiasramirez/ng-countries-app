@@ -23,7 +23,7 @@
 
 <section  class=" responsiveCard">
 
-  <article class="card inBottom" matRipple *ngFor="let region of allRegion">
+  <article class="card inBottom" matRipple *ngFor="let region of allRegion" (click)="goToRegion(region.redirect)">
     <div class="theme--blue-dark sizecard" >
       <p>{{region.name}} <i class="subname">({{region.subname}})</i></p>
     </div>
