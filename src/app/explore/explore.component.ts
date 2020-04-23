@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ServiceCountry } from "../services/service.country";
 import { ExploreService } from "../services/explore.service";
 import { ContinentService } from "../services/continent.service";
+import { Theme } from "../services/theme.service";
+
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { timer,concat, Subject ,from} from "rxjs";
 import { delay } from "rxjs/operators";
@@ -10,7 +12,7 @@ import { Router } from "@angular/router";
   selector: 'app-explore',
   templateUrl: './explore.component.html',
   styleUrls: ['./explore.component.css', '../generalStyle/general.css'],
-  providers: [ServiceCountry, ExploreService, ContinentService]
+  providers: [ServiceCountry, ExploreService, ContinentService, Theme]
 })
 export class ExploreComponent {
 
@@ -26,12 +28,13 @@ export class ExploreComponent {
   }
   constructor(private _snackBar: MatSnackBar,public countryService:ServiceCountry,
              public exploreService:ExploreService, public continent:ContinentService,
-              public router:Router) {
-
+              public router:Router, public theme:Theme) {
+      this.theme.setColorTheme("theme--orange", "menu--orange")
       timer(800).subscribe(timing=>this.openSnackBar('showing all regions', 'Ok'));
       this.setAllContinent();
       this.countryService.changeTextNamePage('Explore')
       this.setAllRegionToArray();
+
 
 
 

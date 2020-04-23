@@ -2,19 +2,21 @@ import { Component } from '@angular/core';
 import { ServiceCountry } from "../services/service.country";
 import { timer } from 'rxjs'
 import { Router } from "@angular/router"
+import { Theme } from "../services/theme.service";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css','../generalStyle/general.css'],
-  providers: [ServiceCountry]
+  providers: [ServiceCountry, Theme]
 })
 export class HomeComponent  {
   public spinner = {
     off:true
   }
-  constructor(public serv:ServiceCountry, public router:Router) {
+  constructor(public serv:ServiceCountry, public router:Router, public theme:Theme) {
     this.spinner_();
     this.serv.changeTextNamePage('Home')
+    this.theme.setColorTheme("theme--blue-dark", "menu--blue-dark")
   }
   goExplore(){
     this.serv.goExplore();

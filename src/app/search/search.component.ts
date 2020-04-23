@@ -3,12 +3,12 @@ import { ServiceCountry} from '../services/service.country'
 import { timer } from 'rxjs'
 import { delay, sampleTime} from 'rxjs/operators'
 import { Router , ActivatedRoute} from '@angular/router'
-
+import { Theme } from "../services/theme.service";
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css','../generalStyle/general.css'],
-  providers: [ServiceCountry]
+  providers: [ServiceCountry,Theme]
 })
 export class SearchComponent {
 
@@ -21,11 +21,11 @@ export class SearchComponent {
   public items : any[];
 
 
-  constructor(public serv:ServiceCountry, public router:Router,public par:ActivatedRoute) {
+  constructor(public serv:ServiceCountry, public router:Router,public par:ActivatedRoute, public theme:Theme) {
       // this.router.navigate(["search", ""])
     this.changeText();
     this.spinnerTime()
-
+    this.theme.setColorTheme("theme--blue-dark", "menu--blue-dark")
 
     this.par.params.subscribe(params=>{
       this.setSearchAutomation(params.name)

@@ -1,8 +1,13 @@
 
-<section  class="responsiveCard">
 
-  <article class="card inBottom" matRipple *ngFor="let region of allCountryOfRegion.data">
-    <div class="theme--blue-dark sizecard" >
+<section class=" inBottom responsive" *ngIf="spinner.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section>
+
+<section  class="responsiveCard" *ngIf="!spinner.off">
+
+  <article class="card inBottom" matRipple *ngFor="let region of allCountryOfRegion.data" (click)="goToCountry(region.name)">
+    <div class="theme--orange sizecard" >
       <p>{{region.name}}</p>
     </div>
 

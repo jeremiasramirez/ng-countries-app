@@ -4,12 +4,12 @@
 
 
 <section class="inBottom responsiveCard" *ngIf="spinner2.off">
-    <mat-spinner></mat-spinner>
+    <mat-spinner color="warn"></mat-spinner>
 </section>
 <section  class=" responsiveCard">
 
   <article class="card inBottom" matRipple *ngFor="let continent of allContinent">
-    <div class="theme--blue-dark sizecard" >
+    <div class="theme--orange sizecard" >
       <p>{{continent.name}}</p>
     </div>
 
@@ -24,7 +24,7 @@
 <section  class=" responsiveCard">
 
   <article class="card inBottom" matRipple *ngFor="let region of allRegion" (click)="goToRegion(region.redirect)">
-    <div class="theme--blue-dark sizecard" >
+    <div class="theme--orange sizecard" >
       <p>{{region.name}} <i class="subname">({{region.subname}})</i></p>
     </div>
 
@@ -36,5 +36,5 @@
 
 
 <section class="inBottom responsiveCard" *ngIf="spinner.off">
-    <mat-spinner></mat-spinner>
+    <mat-spinner color="warn"></mat-spinner>
 </section>
