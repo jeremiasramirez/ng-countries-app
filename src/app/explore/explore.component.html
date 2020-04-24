@@ -3,7 +3,7 @@
 
 <section class="cards--lang">
 
-  <div class="card--lang inBottom" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let language of allLanguages">
+  <div class="card--lang inBottom" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let language of allLanguages"  (click)="goToRegion(language.subname)">
       <h1>{{language.name}}</h1>
   </div>
 
@@ -25,7 +25,7 @@
 
 <section  class=" responsiveCard">
 
-  <article class="card inBottom" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let continent of allContinent">
+  <article class="card inBottom" matRipple *ngFor="let continent of allContinent" (click)="goToRegion(continent.redirect)">
     <div class="theme--orange sizecard" >
       <p>{{continent.name}}</p>
     </div>
@@ -40,7 +40,7 @@
 
 <section  class=" responsiveCard">
 
-  <article class="card inBottom" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let region of allRegion" (click)="goToRegion(region.redirect)">
+  <article class="card inBottom" matRipple *ngFor="let region of allRegion" (click)="goToRegion(region.redirect)">
     <div class="theme--orange sizecard" >
       <p>{{region.name}} <i class="subname">({{region.subname}})</i></p>
     </div>

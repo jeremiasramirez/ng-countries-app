@@ -25,6 +25,7 @@
 }
 .inOut{
   animation : outing 1s linear;
+  transform: scale(0);
 }
 
 @keyframes outing {

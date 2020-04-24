@@ -2,27 +2,32 @@
   {
     "id": 1,
     "name": "Africa",
-    "image": "african.png"
+    "image": "african.png",
+    "redirect" : "africa"
   },
   {
     "id": 2,
     "name": "Americas",
-    "image": "americas.jpg"
+    "image": "americas.jpg",
+    "redirect" : "americas"
   },
 
   {
     "id":3,
     "name": "Asia",
-    "image": "asias.png"
+    "image": "asias.png",
+    "redirect" : "asia"
   },
   {
     "id": 4,
     "name": "Europe",
-    "image": "europe.jpg"
+    "image": "europe.jpg",
+    "redirect" : "europe"
   },
   {
     "id": 5,
     "name": "Oceania",
-    "image": "oceania.png"
+    "image": "oceania.png",
+    "redirect" : "oceania"
   }
 ]

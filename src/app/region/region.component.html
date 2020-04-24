@@ -1,12 +1,29 @@
 
-
 <section class=" inBottom responsive inOut" *ngIf="spinner.off">
     <mat-spinner color="warn"></mat-spinner>
 </section>
 
+<section class=" inBottom responsive inOut" *ngIf="spinner2.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section>
 <section  class="responsiveCard" *ngIf="!spinner.off">
 
-  <article class="card inBottom" matRipple *ngFor="let region of allCountryOfRegion.data" (click)="goToCountry(region.name)">
+  <article class="card inBottom" matRipple matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let region of allCountryOfRegion.data" (click)="goToCountry(region.name)">
+    <div class="theme--orange sizecard" >
+      <p>{{region.name}}</p>
+    </div>
+
+    <img src="{{region.flag}}" alt="image region" class="card--img">
+  </article>
+
+
+</section>
+
+
+
+<section  class="responsiveCard"  *ngIf="!spinner2.off">
+
+  <article class="card inBottom" matRipple *ngFor="let region of allCountryOfContinent.data" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" (click)="goToCountry(region.name)">
     <div class="theme--orange sizecard" >
       <p>{{region.name}}</p>
     </div>
