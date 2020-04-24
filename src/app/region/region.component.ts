@@ -26,7 +26,7 @@ export class RegionComponent  {
 
     this.continent.getAllContinentOfRegion(this.params.data).subscribe(data=>{
       this.allCountryOfRegion.data = data;
-      console.log(this.allCountryOfRegion.data);
+      // console.log(this.allCountryOfRegion.data);
     }, (err)=>{ return err }, ()=>{this.spinner.off=false})
 
 

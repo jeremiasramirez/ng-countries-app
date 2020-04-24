@@ -8,3 +8,29 @@ mat-form-field {
   font-size: 12px;
   margin-left: -6.5px;
 }
+.cards--lang{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+@media screen and (max-width: 590px) {
+  .cards--lang{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.card--lang{
+  margin: .5em;
+  width: 310px;
+  border-radius: 3.5px;
+  text-align: center;
+  background: orangered;
+
+}
+
+.card--lang *{
+  color: #eee;
+  font-size: 15px;
+  font-family: roboto;
+  margin: 0;
+}

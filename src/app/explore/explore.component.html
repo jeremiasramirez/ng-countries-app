@@ -1,6 +1,13 @@
 
 
 
+<section class="cards--lang">
+
+  <div class="card--lang inBottom" matRipple *ngFor="let language of allLanguages">
+      <h1>{{language.name}}</h1>
+  </div>
+
+</section>
 
 
 <section class="inBottom responsiveCard inOut" *ngIf="spinner2.off">
@@ -15,13 +22,6 @@
     <mat-spinner color="warn"></mat-spinner>
 </section>
 
-<section class="responsiveCard">
-
-  <div class="card--lang" matRipple *ngFor="let language of allLanguages">
-      <h1>{{language.name}}</h1>
-  </div>
-
-</section>
 
 <section  class=" responsiveCard">
 
