@@ -22,9 +22,10 @@ mat-form-field {
 .card--lang{
   margin: .5em;
   width: 310px;
-  border-radius: 3.5px;
+  border-radius:  3px;
+  cursor: pointer;
   text-align: center;
-  background: orangered;
+  background: darkorange;
 
 }
 

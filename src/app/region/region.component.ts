@@ -3,7 +3,7 @@ import { ActivatedRoute,Router } from "@angular/router";
 
 import { ContinentService } from "../services/continent.service";
 import { Theme } from "../services/theme.service";
-
+import { delay } from "rxjs/operators";
 @Component({
   selector: 'app-region',
   templateUrl: './region.component.html',
@@ -24,7 +24,7 @@ export class RegionComponent  {
       this.theme.setColorTheme("theme--orange", "menu--orange")
     this.param.params.subscribe(data=>{this.params.data = data.region})
 
-    this.continent.getAllContinentOfRegion(this.params.data).subscribe(data=>{
+    this.continent.getAllContinentOfRegion(this.params.data).pipe(delay(500)).subscribe(data=>{
       this.allCountryOfRegion.data = data;
       // console.log(this.allCountryOfRegion.data);
     }, (err)=>{ return err }, ()=>{this.spinner.off=false})

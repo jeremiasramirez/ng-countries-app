@@ -104,7 +104,7 @@ export class ExploreComponent {
 
 
   public goToRegion(name:string){
-    this.router.navigate(["explore/region", name]);
+    timer(500).subscribe(timing=>this.router.navigate(["explore/region", name]))
   }
 
 }

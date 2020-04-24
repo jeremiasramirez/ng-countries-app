@@ -32,6 +32,6 @@
     transform: scale(0);
   }
     to{
-      transform: scale(.7);
+      transform: scale(.5);
     }
 }
