@@ -1,22 +1,27 @@
 [
   {
     "id" :1,
-    "name": "en"
+    "name": "English",
+    "subname": "en"
   },
   {
     "id" :2,
-    "name": "es"
+    "name": "Spanish",
+    "subname": "es"
   },
   {
     "id" :3,
-    "name": "fr"
+    "name": "Français",
+    "subname": "fr"
   },
   {
     "id" :4,
-    "name": "ar"
+    "name": "Arabic",
+    "subname": "ar"
   },
   {
     "id" :5,
-    "name": "por"
+    "name": "Português",
+    "subname": "por"
   }
 ]
