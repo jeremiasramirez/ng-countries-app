@@ -67,8 +67,8 @@ export class RegionComponent  {
 
 
   }
-  goToCountry(name:any){
-    // this.router.navigate(["explore/region0"])
+  explore(){
+   this.router.navigate(["explore"]);
   }
 
 
