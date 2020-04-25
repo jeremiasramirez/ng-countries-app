@@ -13,7 +13,7 @@ mat-form-field {
   grid-template-columns: 300px 300px 300px;
   grid-column-gap: 8px;
   grid-row-gap: 0;
-  grid-template-rows: 100px 100px;
+  grid-template-rows: 80px 80px;
   grid-auto-flow: dense;
   align-items: stretch;
   justify-content: center;
