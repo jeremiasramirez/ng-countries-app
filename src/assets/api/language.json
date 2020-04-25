@@ -23,5 +23,15 @@
     "id" :5,
     "name": "Português",
     "subname": "por"
+  },
+  {
+    "id" :6,
+    "name": "Russian",
+    "subname": "ru"
+  },
+  {
+    "id" :7,
+    "name": "Hindu",
+    "subname": "hi"
   }
 ]

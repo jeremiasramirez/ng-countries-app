@@ -24,7 +24,7 @@ export class ServiceCountry{
 
     return ajax.get(`https://restcountries.eu/rest/v2/name/${name}`).pipe(
       pluck('response'),
-      delay(100)
+      delay(10)
     )
 
   }

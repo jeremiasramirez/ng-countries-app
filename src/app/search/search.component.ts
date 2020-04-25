@@ -26,10 +26,10 @@ export class SearchComponent {
     this.changeText();
     this.spinnerTime()
     this.theme.setColorTheme("theme--blue-dark", "menu--blue-dark")
-
+   
     this.par.params.subscribe(params=>{
 
-
+        this.items = []
         this.setSearchAutomation(params.name)
 
 
@@ -37,10 +37,10 @@ export class SearchComponent {
           this.form.value = params.name;
         }
 
+        this.spinner.off=true;
 
 
-
-    })
+    }, (err)=>{return err}, ()=>{this.spinner.off=false;})
 
 
    }
@@ -53,7 +53,7 @@ export class SearchComponent {
 
      setTimeout(() => {
           this.spinner.off=false
-     }, 1000);
+     }, 600);
    }
 
    setSearchAutomation(name:string=''){
@@ -68,21 +68,21 @@ export class SearchComponent {
      this.router.navigate(["search", data])
    }
    keyupSearch(data:any=''){
-       if (data.length >= 3){
+       if (data.length >= 4){
       this.spinnerTime()
       this.spinner.off=true
-       this.setNavigateData(data)
+      this.setNavigateData(data)
 
 
 
 
-     timer(2000).subscribe(timing=>{
+     timer(3000).subscribe(timing=>{
 
         // this.items = []
 
          this.serv.search(data).pipe(
 
-         ).pipe(delay(1000)).subscribe(resp=>{
+         ).pipe(delay(100)).subscribe(resp=>{
 
            this.items = resp
 

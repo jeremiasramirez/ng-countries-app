@@ -48,16 +48,21 @@ export class ExploreComponent {
               public router:Router, public theme:Theme, public language:LanguageService) {
 
       this.theme.setColorTheme("theme--orange", "menu--orange");
-
-      timer(800).subscribe(timing=>this.openSnackBar('showing all regions', 'Ok'));
-
-      this.setAllContinent();
-
       this.countryService.changeTextNamePage('Explore')
 
-      this.setAllRegionToArray();
+      timer(100).subscribe(timing=>{
 
-      this.setAllLanguages()
+        this.openSnackBar('showing all regions', 'Ok')
+
+        this.setAllContinent();
+
+        this.setAllRegionToArray();
+
+        this.setAllLanguages()
+      });
+
+
+
 
 
 
@@ -84,7 +89,7 @@ export class ExploreComponent {
   }
   setAllRegionToArray(){
 
-    this.exploreService.getAllRegion().pipe(delay(600)).subscribe(resp=>{
+    this.exploreService.getAllRegion().pipe(delay(100)).subscribe(resp=>{
         this.allRegion = resp;
 
 

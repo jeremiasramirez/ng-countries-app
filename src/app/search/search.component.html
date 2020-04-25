@@ -25,7 +25,7 @@
 <br>
 <section class="responsiveCard">
 
-  <div class="card inBottom" matRipple="rgba(0%, 0%, 100%, 20%)" *ngFor="let card of items">
+  <div class="card inBottom " matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let card of items">
 
     <article class="theme--blue-dark" style="width: 289px;">
         <p>{{ card.name }}</p>
@@ -38,6 +38,6 @@
 
 </section>
 
-<div class="responsiveCard inBottom" *ngIf="!form.value && !spinner.off">
-  <button (click)="goExplore()" type="button" mat-flat-button   name="button">Explore <i class="fas fa-ellipsis-h"></i></button>
+<div class="responsiveCard inBottom"  *ngIf="!form.value && !spinner.off">
+  <button (click)="goExplore()" type="button" mat-flat-button matRipple  matRippleColor="rgba(0%, 10%, 80%, 30%)"  name="button">Explore <i class="fas fa-ellipsis-h"></i></button>
 </div>

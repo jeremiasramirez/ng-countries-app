@@ -11,7 +11,7 @@ export class LanguageService{
   }
 
   getAllForLanguages(){
-     return ajax.get(this.urlForLanguages).pipe(delay(1000),pluck('response'))
+     return ajax.get(this.urlForLanguages).pipe(delay(10),pluck('response'))
   }
 
   getAllCountryForLanguage(name:string){

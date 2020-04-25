@@ -17,7 +17,7 @@ export class ContinentService{
 
     return ajax.get(this.urlAllContinent).pipe(
       pluck('response'),
-      delay(100)
+      delay(10)
     )
 
   }
@@ -25,7 +25,7 @@ export class ContinentService{
   getAllContinentOfRegion(name:string){
 
     return ajax.get(`${this.urlAllRegion}${name}`).pipe(
-      delay(100),
+      delay(10),
       pluck('response')
     )
 
@@ -33,7 +33,7 @@ export class ContinentService{
   getAllCountryOfContinent(name:string){
 
     return ajax.get(`${this.urlAllCountry}${name}`).pipe(
-      delay(100),
+      delay(10),
       pluck('response')
     )
 

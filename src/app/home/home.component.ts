@@ -22,7 +22,7 @@ export class HomeComponent  {
     this.serv.goExplore();
   }
   spinner_(){
-    timer(800).subscribe(timing=>this.spinner.off=false)
+    timer(400).subscribe(timing=>this.spinner.off=false)
   }
   toEs(){
     timer(1000).subscribe(timing=>  this.router.navigate(["explore/country/language","es"] ))

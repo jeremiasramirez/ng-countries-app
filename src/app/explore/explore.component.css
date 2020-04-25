@@ -9,29 +9,42 @@ mat-form-field {
   margin-left: -6.5px;
 }
 .cards--lang{
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-column-gap: 8px;
+  grid-row-gap: 0;
+  grid-template-rows: 100px 100px;
+  grid-auto-flow: dense;
   align-items: stretch;
+  justify-content: center;
+
 }
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 910px) {
   .cards--lang{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 99%;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px;
+    justify-content: center;
+    line-height: 30px;
   }
 }
 .card--lang{
-  margin: .5em;
-  width: 310px;
+  margin: .1em 0;
+  /* width: 310px; */
   border-radius:  3px;
   cursor: pointer;
   text-align: center;
+  height: 50px;
+  line-height: 50px;
   background: darkorange;
 
 }
 
 .card--lang *{
   color: #eee;
+  align-items: center;
   font-size: 15px;
   font-family: roboto;
   margin: 0;
+  padding:0;
 }

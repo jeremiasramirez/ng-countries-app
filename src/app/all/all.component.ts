@@ -16,7 +16,7 @@ export class AllComponent  {
   constructor(public countryService: ServiceCountry, public theme:Theme) {
     this.theme.setColorTheme("theme--blue-dark", "menu--blue-dark")
     this.countryService.changeTextNamePage('All')
-    this.chargedCountries();
+    timer(300).subscribe(timing=>this.chargedCountries())
 
   }
 
