@@ -6,3 +6,17 @@
 .sizecard{
   width: 290px
 }
+
+
+.choose{
+  background-color: darkblue;
+  height: 100px;
+  border-radius: 4px;
+  margin: 1em;
+  color: #ddd;
+  text-align: center;
+  font-size: 20px;
+  font-family: roboto;
+  font-weight: 500;
+
+}
