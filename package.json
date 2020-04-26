@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "jeremias-alert": "^1.0.0",
     "jeremias-animation": "^1.1.1",
     "jeremias-button": "^1.0.0",
     "jeremias-lib": "^1.4.9",

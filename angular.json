@@ -30,6 +30,7 @@
               "node_modules/jeremias-theme/css/jeremias-theme.css",
               "node_modules/jeremias-button/css/jeremias-button.css",
               "node_modules/jeremias-menu/css/jeremias-menu.css",
+              "node_modules/jeremias-alert/css/jeremias-alert.css",
               "src/assets/fontawesome/css/all.min.css"
             ],
             "scripts": []
