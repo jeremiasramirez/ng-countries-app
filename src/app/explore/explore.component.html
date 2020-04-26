@@ -1,13 +1,19 @@
 
-
-
-<div class="alert--await inBottom min" >
-  Languages
-</div>
+<section class="inBottom responsiveCard inOut" *ngIf="spinner.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section>
 
 <section class="inBottom responsiveCard inOut" *ngIf="spinner2.off">
     <mat-spinner color="warn"></mat-spinner>
 </section>
+
+<section class="inBottom responsiveCard inOut" *ngIf="spinner3.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section>
+<div class="alert--await inBottom min" >
+  Languages
+</div>
+
 
 <section class="cards--lang">
 
@@ -24,9 +30,7 @@
 </div>
 
 
-<section class="inBottom responsiveCard inOut" *ngIf="spinner3.off">
-    <mat-spinner color="warn"></mat-spinner>
-</section>
+
 
 <section  class=" responsiveCard">
 
@@ -41,9 +45,7 @@
 
 </section>
 
-<section class="inBottom responsiveCard inOut" *ngIf="spinner.off">
-    <mat-spinner color="warn"></mat-spinner>
-</section>
+
 
 
 <div class="alert--await inBottom min" >
