@@ -1,17 +1,14 @@
 
 
 
-<section class="inBottom responsiveCard inOut" *ngIf="spinner3.off">
-    <mat-spinner color="warn"></mat-spinner>
-</section>
+<div class="alert--await inBottom min" >
+  Languages
+</div>
 
 <section class="inBottom responsiveCard inOut" *ngIf="spinner2.off">
     <mat-spinner color="warn"></mat-spinner>
 </section>
 
-<section class="inBottom responsiveCard inOut" *ngIf="spinner.off">
-    <mat-spinner color="warn"></mat-spinner>
-</section>
 <section class="cards--lang">
 
   <div class="card--lang inBottom" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let language of allLanguages"  (click)="goToRegion(language.subname)">
@@ -22,6 +19,14 @@
 
 
 
+<div class="alert--await inBottom min" >
+  Continent
+</div>
+
+
+<section class="inBottom responsiveCard inOut" *ngIf="spinner3.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section>
 
 <section  class=" responsiveCard">
 
@@ -36,7 +41,14 @@
 
 </section>
 
+<section class="inBottom responsiveCard inOut" *ngIf="spinner.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section>
 
+
+<div class="alert--await inBottom min" >
+  Region
+</div>
 
 <section  class=" responsiveCard">
 
