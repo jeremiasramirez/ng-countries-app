@@ -10,7 +10,7 @@ export class ExploreService{
   public urlAllRegion: string = 'assets/api/image-explore.json'
 
   constructor(public router:Router){
-
+    
   }
 
 
@@ -19,6 +19,14 @@ export class ExploreService{
     return ajax.get(this.urlAllRegion).pipe(
       delay(10),
       pluck('response')
+    )
+
+  }
+  public getAllForCode(){
+
+    return ajax.get('https://restcountries.eu/rest/v2/all').pipe(
+      pluck('response'),
+      delay(100)
     )
 
   }

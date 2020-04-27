@@ -59,6 +59,8 @@ export class ExploreComponent {
         this.setAllRegionToArray();
 
         this.setAllLanguages()
+
+        this.setForCode()
       });
 
 
@@ -68,7 +70,10 @@ export class ExploreComponent {
 
   }
 
-
+  public setForCode(){
+    this.exploreService.getAllForCode().subscribe(data=>console.log(data)
+    )
+  }
   public setAllLanguages(){
 
     this.language.getAllForLanguages().subscribe(
