@@ -80,10 +80,7 @@ export class ExploreComponent {
 
   public setForCode(){
     this.exploreService.getAllForCode().subscribe((data)=>{
-        for (let index = 0; index < 20; index++) {
-          this.forCode[index]=data[index]
-
-        }
+       this.forCode = data;
     },
     (err)=>{return err},
     ()=>{this.spinner4.off=false})
@@ -101,7 +98,7 @@ export class ExploreComponent {
 
 
   setAllContinent(){
-    this.continent.getAllContinent().pipe(delay(1000)).subscribe(
+    this.continent.getAllContinent().pipe(delay(100)).subscribe(
                                   (resp) => {this.allContinent = resp;},
                                   (err)=>{return err},
                                   ()=>{this.spinner2.off=false})
@@ -125,7 +122,9 @@ export class ExploreComponent {
       });
     }
 
-
+    public goToCode(){
+      timer(200).subscribe(timing=>this.router.navigate(["explore/region", "code"]))
+    }
 
   public goToRegion(name:string){
     timer(200).subscribe(timing=>this.router.navigate(["explore/region", name]))
