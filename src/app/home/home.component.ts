@@ -25,10 +25,10 @@ export class HomeComponent  {
     timer(400).subscribe(timing=>this.spinner.off=false)
   }
   toEs(){
-    timer(1000).subscribe(timing=>  this.router.navigate(["explore/country/language","es"] ))
+    timer(100).subscribe(timing=>  this.router.navigate(["explore/country/language","es"] ))
   }
   toUs(){
-        timer(1000).subscribe(timing=>  this.router.navigate(["explore/country/language","en"] ))
+        timer(100).subscribe(timing=>  this.router.navigate(["explore/country/language","en"] ))
   }
 
 

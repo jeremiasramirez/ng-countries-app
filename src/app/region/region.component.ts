@@ -54,14 +54,14 @@ export class RegionComponent  {
 
   }
   getAllCountryOfContinents(){
-    this.continent.getAllCountryOfContinent(this.params.data).pipe(delay(500)).subscribe(data=>{
+    this.continent.getAllCountryOfContinent(this.params.data).pipe(delay(200)).subscribe(data=>{
       this.allCountryOfContinent.data = data;
     }, (err)=>{ return err}, ()=>{ this.spinner2.off=false;this.spinner.off=false })
 
   }
 
   getAllContinentOfRegions(){
-    this.continent.getAllContinentOfRegion(this.params.data).pipe(delay(500)).subscribe(data=>{
+    this.continent.getAllContinentOfRegion(this.params.data).pipe(delay(200)).subscribe(data=>{
       this.allCountryOfRegion.data = data;
     }, (err)=>{this.spinner2.off=false }, ()=>{this.spinner.off=false;this.spinner2.off=false})
 
