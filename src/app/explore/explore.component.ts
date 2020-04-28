@@ -7,7 +7,7 @@ import { Theme } from "../services/theme.service";
 
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { timer,concat, Subject ,from} from "rxjs";
-import { delay } from "rxjs/operators";
+import { delay,take } from "rxjs/operators";
 import { Router } from "@angular/router";
 
 
@@ -31,6 +31,7 @@ export class ExploreComponent {
 
   public allContinent : [];
 
+  public forCode : any[] = [];
 
   public spinner = {
     off:true
@@ -43,6 +44,11 @@ export class ExploreComponent {
   public spinner3 = {
     off:true
   }
+
+  public spinner4 = {
+    off:true
+  }
+  public obsCode = new Subject();
   constructor(private _snackBar: MatSnackBar,public countryService:ServiceCountry,
               public exploreService:ExploreService, public continent:ContinentService,
               public router:Router, public theme:Theme, public language:LanguageService) {
@@ -60,8 +66,10 @@ export class ExploreComponent {
 
         this.setAllLanguages()
 
-        this.setForCode()
-      });
+        // this.setForCode()
+
+
+      })
 
 
 
@@ -71,8 +79,14 @@ export class ExploreComponent {
   }
 
   public setForCode(){
-    this.exploreService.getAllForCode().subscribe(data=>console.log(data)
-    )
+    this.exploreService.getAllForCode().subscribe((data)=>{
+        for (let index = 0; index < 20; index++) {
+          this.forCode[index]=data[index]
+
+        }
+    },
+    (err)=>{return err},
+    ()=>{this.spinner4.off=false})
   }
   public setAllLanguages(){
 

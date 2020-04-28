@@ -10,6 +10,10 @@
 <section class="inBottom responsiveCard inOut" *ngIf="spinner3.off">
     <mat-spinner color="warn"></mat-spinner>
 </section>
+<!--
+<section class="inBottom responsiveCard inOut" *ngIf="spinner4.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section> -->
 <div class="alert--await inBottom min" >
   Languages
 </div>
@@ -60,6 +64,23 @@
     </div>
 
     <img src="assets/imgExplore/{{region.image}}" alt="image region" class="card--img">
+  </article>
+
+
+</section>
+
+  <div class="alert--await inBottom min">
+  By code
+</div>
+
+ <section  class=" responsiveCard">
+
+  <article class="card inBottom" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)"  (click)="goToRegion(continent.redirect)">
+    <div class="theme--orange sizecard" >
+      <p>By code</p>
+    </div>
+
+    <img src="assets/imgExplore/phone.png" alt="image region" class="minmin">
   </article>
 
 
