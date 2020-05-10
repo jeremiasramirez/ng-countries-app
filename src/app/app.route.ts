@@ -11,7 +11,7 @@ import { CountryComponent } from './country/country.component'
 
 const ROUTES : Routes = [
 
-  {path: 'init', component: InitComponent},
+  // {path: 'init', component: InitComponent},
   {path: 'home', component: HomeComponent},
   {path: 'search/:name', component: SearchComponent},
   {path: 'search', component: SearchComponent},

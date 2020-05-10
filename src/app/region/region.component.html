@@ -12,7 +12,7 @@
 </section>
 <section  class="responsiveCard" *ngIf="!spinner.off">
 
-  <article class="card inBottom" matRipple matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let region of allCountryOfRegion.data" (click)="goToCountry(region.name)">
+  <article class="card inBottom" matRipple matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let region of allCountryOfRegion.data" (click)="goToOnly(region.alpha2Code)">
     <div class="theme--orange sizecard" >
       <p>{{region.name}}</p>
     </div>
@@ -27,7 +27,7 @@
 
 <section  class="responsiveCard"  *ngIf="!spinner2.off">
 
-  <article class="card inBottom" matRipple *ngFor="let region of allCountryOfContinent.data" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" (click)="goToCountry(region.name)">
+  <article class="card inBottom" matRipple *ngFor="let region of allCountryOfContinent.data" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" (click)="goToOnly(region.alpha2Code)">
     <div class="theme--orange sizecard" >
       <p>{{region.name}}</p>
     </div>

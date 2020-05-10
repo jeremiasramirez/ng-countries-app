@@ -101,6 +101,10 @@ export class RegionComponent  {
 
   }
 
+  goToOnly(data){
+    console.log(data)
+  }
+
   getAllContinentOfRegions(){
     this.continent.getAllContinentOfRegion(this.params.data).pipe(delay(200)).subscribe(data=>{
       this.allCountryOfRegion.data = data;
