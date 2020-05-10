@@ -21,7 +21,7 @@ const ROUTES : Routes = [
 
   {path: 'explore', component: ExploreComponent},
   {path: 'explore/region/:region', component: RegionComponent},
-  {path: 'explore/language/:lang', component: CountryComponent},
+  {path: 'explore/only/:only', component: CountryComponent},
 
   {path: 'about', component: AboutComponent},
   {path: '', component: InitComponent},
