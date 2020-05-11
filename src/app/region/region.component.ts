@@ -5,7 +5,8 @@ import { ContinentService } from "../services/continent.service";
 import { LanguageService } from "../services/language.service";
 import { ExploreService } from "../services/explore.service";
 import { Theme } from "../services/theme.service";
-import { delay } from "rxjs/operators";
+import { delay ,pluck, filter} from "rxjs/operators";
+import { ajax } from "rxjs/ajax";
 
 
 @Component({
@@ -101,8 +102,11 @@ export class RegionComponent  {
 
   }
 
-  goToOnly(data){
-    console.log(data)
+  goToOnly(name:string){
+
+    this.router.navigate(["explore/only", name])
+    
+
   }
 
   getAllContinentOfRegions(){
