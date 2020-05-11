@@ -7,13 +7,13 @@ import { ExploreService } from "../services/explore.service";
 import { Theme } from "../services/theme.service";
 import { delay ,pluck, filter} from "rxjs/operators";
 import { ajax } from "rxjs/ajax";
-
+import { ServiceCountry } from "../services/service.country";
 
 @Component({
   selector: 'app-region',
   templateUrl: './region.component.html',
   styleUrls: ['./region.component.css', '../generalStyle/general.css'],
-  providers: [ContinentService, Theme, LanguageService, ExploreService]
+  providers: [ContinentService, Theme,ServiceCountry, LanguageService, ExploreService]
 })
 
 
@@ -54,10 +54,10 @@ export class RegionComponent  {
 
   constructor(public param:ActivatedRoute ,public continent:ContinentService,
               public theme:Theme, public router:Router, public languages:LanguageService,
-              public explores:ExploreService) {
+              public explores:ExploreService,  public countryService:ServiceCountry) {
 
     this.theme.setColorTheme("theme--orange", "menu--orange")
-
+    this.countryService.changeTextNamePage('Region');
     this.param.params.subscribe(param=>{
 
       if(param.region == "code") {
@@ -105,7 +105,7 @@ export class RegionComponent  {
   goToOnly(name:string){
 
     this.router.navigate(["explore/only", name])
-    
+
 
   }
 

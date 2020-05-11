@@ -1,0 +1,30 @@
+
+.only--cards{
+  max-width: 500px;
+  border: 1px solid red;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.card--only{
+  max-width: inherit;
+}
+
+
+.img--only{
+  width: 100%;
+}
+
+
+.only--title{
+  font-family: roboto;
+  padding:0;
+  font-size:16px;
+  margin:0;
+  text-align: center;
+  padding:0;
+}

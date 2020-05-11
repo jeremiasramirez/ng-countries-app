@@ -1,13 +1,23 @@
 
-<section  class=" responsiveCard">
-
-  <article class="card inBottom" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let country of inform"  >
-    <div class="theme--orange sizecard" >
-      <p>{{country.name}}</p>
-    </div>
-
-    <img src={{country.flag}} alt="image region" class="card--img">
-  </article>
 
 
-</section>
+  <section class=" inBottom responsive inOut" *ngIf="spinner.off">
+      <mat-spinner></mat-spinner>
+  </section>
+
+<div class="responsive">
+
+  <section  class="only--cards">
+
+    <article class="card--only" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let country of inform"  >
+      <div class="">
+        <p class="only--title">{{country.name}}</p>
+      </div>
+
+      <img src={{country.flag}} alt="image region" class="img--only">
+    </article>
+
+
+  </section>
+
+</div>
