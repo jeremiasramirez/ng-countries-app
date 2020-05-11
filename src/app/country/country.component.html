@@ -1,1 +1,13 @@
-<p>country works!</p>
+
+<section  class=" responsiveCard">
+
+  <article class="card inBottom" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let country of inform"  >
+    <div class="theme--orange sizecard" >
+      <p>{{country.name}}</p>
+    </div>
+
+    <img src={{country.flag}} alt="image region" class="card--img">
+  </article>
+
+
+</section>
