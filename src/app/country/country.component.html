@@ -1,15 +1,15 @@
 
 
 
-  <section class=" inBottom responsive inOut" *ngIf="spinner.off">
-      <mat-spinner></mat-spinner>
+  <section class=" inBottom responsive inOut" >
+      <mat-spinner color="warn"></mat-spinner>
   </section>
 
 <div class="responsive">
 
-  <section  class="only--cards">
+  <section  class="only--cards" *ngIf="!spinner.off">
 
-    <article class="card--only" matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let country of inform"  >
+    <article class="card--only in" *ngFor="let country of inform"  >
       <div class="">
         <p class="only--title">{{country.name}}</p>
       </div>

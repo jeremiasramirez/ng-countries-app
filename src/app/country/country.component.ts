@@ -8,7 +8,7 @@ import {ActivatedRoute} from "@angular/router";
 @Component({
   selector: 'app-country',
   templateUrl: './country.component.html',
-  styleUrls: ['./country.component.css'],
+  styleUrls: ['./country.component.css','../generalStyle/general.css'],
   providers: [Theme, ServiceCountry]
 })
 export class CountryComponent  {
