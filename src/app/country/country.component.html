@@ -1,13 +1,10 @@
 
 
 
-  <section class=" inBottom responsive inOut" >
-      <mat-spinner color="warn"></mat-spinner>
-  </section>
 
-<div class="responsive">
+<div class="responsive" *ngIf="!spinner.off">
 
-  <section  class="only--cards" *ngIf="!spinner.off">
+  <section  class="only--cards" >
 
     <article class="card--only in" *ngFor="let country of inform"  >
       <div class="">
@@ -21,3 +18,7 @@
   </section>
 
 </div>
+
+  <section class=" inBottom responsive inOut" >
+      <mat-spinner color="warn"></mat-spinner>
+  </section>
