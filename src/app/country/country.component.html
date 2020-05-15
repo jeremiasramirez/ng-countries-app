@@ -56,11 +56,34 @@
       <div class="divider" *ngIf="country.area"></div>
 
 
+      <div class="separateFlex" *ngIf="country.currencies[0].code">
+        <mat-list-item role="listitem">Currencies</mat-list-item>
+        <mat-list-item role="listitem">{{country.currencies[0].code}}</mat-list-item>
+      </div>
+     <div class="divider" *ngIf="country.currencies[0].code"></div>
+
+
         <div class="separateFlex" *ngIf="country.callingCodes">
           <mat-list-item role="listitem">Calling code</mat-list-item>
           <mat-list-item role="listitem">+{{country.callingCodes[0]}}</mat-list-item>
       </div>
       <div class="divider" *ngIf="country.callingCodes"></div>
+
+
+      <div class="separateFlex" *ngIf="country.timezones[0]">
+        <mat-list-item role="listitem">Time zones</mat-list-item>
+        <mat-list-item role="listitem">+{{country.timezones[0]}}</mat-list-item>
+    </div>
+    <div class="divider" *ngIf="country.timezones[0]"></div>
+
+
+
+    <div class="separateFlex" *ngIf="country.translations.es">
+      <mat-list-item role="listitem">Translation</mat-list-item>
+      <mat-list-item role="listitem">{{country.translations.es}}</mat-list-item>
+    </div>
+  <div class="divider" *ngIf="country.translations.es"></div>
+
 
 
       <div class="separateFlex" *ngIf="country.numericCode">
