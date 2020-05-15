@@ -77,6 +77,28 @@
 
 
 
+
+
+    <section class="borders">
+      <h1 class="title text--white">Borders</h1>
+      <div class="card inBottom" matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let border of borders" (click)="goToOnly(card.alpha2Code)">
+        
+  
+        
+        <mat-list>
+          <mat-list-item  >
+            <img matListAvatar src="{{border.flag}}" alt="{{ border.name}}">
+            <p matLine style="color:#222">
+              {{ border.name}}
+            </p>
+          </mat-list-item>
+      
+        </mat-list>
+      
+  
+      </div>
+    </section>
+  
   </section>
 
 </div>
@@ -87,25 +109,5 @@
  
 
  
-<!---
-  <section class="borders">
 
 
-  <div class="card inBottom" matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let border of borders" (click)="goToOnly(card.alpha2Code)">
-     
-
-
-    <mat-list>
-      <mat-list-item  >
-        <img matListAvatar src="{{card.flag}}" alt="{{ card.name}}">
-        <p matLine style="color:#222">
-          {{ card}}
-        </p>
-      </mat-list-item>
-  
-    </mat-list>
-   
-
-  </div>
-  </section>
--->
