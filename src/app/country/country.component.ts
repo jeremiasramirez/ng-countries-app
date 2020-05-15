@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ajax } from 'rxjs/ajax'
-import { timer } from 'rxjs'
+import {Router} from "@angular/router"
 import { pluck,delay } from 'rxjs/operators'
 import { Theme } from "../services/theme.service";
 import { ServiceCountry } from "../services/service.country";
@@ -22,8 +22,12 @@ export class CountryComponent  {
   titleCountry: string = '......';
 
   inform :any[]= []
-  constructor(public theme:Theme, public param:ActivatedRoute, public countryService:ServiceCountry) {
-
+  constructor(public theme:Theme, public router:Router,public param:ActivatedRoute, public countryService:ServiceCountry) {
+    
+    this.inform = []
+    this.borders = []
+    this.storageBolders = []
+ 
     this.theme.setColorTheme("theme--orange", "menu--orange");
 
     this.param.params.subscribe(par=>{
@@ -77,7 +81,14 @@ export class CountryComponent  {
 
   }
 
- 
+  goToOnly(name:string){
+    this.inform = []
+    this.borders = []
+    this.storageBolders = []
+    this.router.navigate(["explore/only", name])
+
+    
+  }
 
 
 }

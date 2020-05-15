@@ -83,9 +83,9 @@
 
 
 
-    <section class="borders">
+    <section class="borders" *ngIf="borders.length">
       <h1 class="title text--white">Borders <span class="letter3 text--white">{{borders.length}}</span></h1>
-      <div class="card inBottom" matRipple  matRippleColor="rgba(80%, 10%, 0%, 80%)" *ngFor="let border of borders" (click)="goToOnly(card.alpha2Code)">
+      <div class="card inBottom" matRipple  matRippleColor="rgba(80%, 10%, 0%, 80%)" *ngFor="let border of borders" (click)="goToOnly(border.alpha2Code)">
         
   
         
