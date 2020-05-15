@@ -13,6 +13,7 @@ import {ActivatedRoute} from "@angular/router";
   providers: [Theme, ServiceCountry]
 })
 export class CountryComponent  {
+  borders = []
   spinner = {
     off:true
   }
@@ -41,11 +42,26 @@ export class CountryComponent  {
                 this.inform.unshift(data[i]);console.log(this.inform)
                 this.titleCountry = this.inform[0].name
                 this.countryService.changeTextNamePage(this.titleCountry)
+
               }
           }
+
+          if (this.inform){
+
+              
+            for(let j=0; j<this.inform.length; j++){
+              console.log(this.inform[j].borders)
+               
+
+            }
+
+        }
       }, (err)=>{return err}, ()=>{this.spinner.off=false})
 
+
   }
+
+ 
 
 
 }
