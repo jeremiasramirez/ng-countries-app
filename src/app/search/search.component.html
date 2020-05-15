@@ -26,13 +26,18 @@
 <section class="responsiveCard">
 
   <div class="card inBottom " matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let card of items">
+ 
 
-    <article class="theme--blue-dark" style="width: 289px;">
-        <p>{{ card.name }}</p>
-    </article>
-
-    <img  style="width: 289px; height=289px" src={{card.flag}} alt="photo country" class="cardImage inBottom" style="width: 293px">
-
+    <mat-list>
+      <mat-list-item  >
+        <img matListAvatar src="{{card.flag}}" alt="{{ card.name}}">
+        <p matLine style="color:#222">
+          {{ card.name}}
+        </p>
+      </mat-list-item>
+  
+    </mat-list>
+   
   </div>
 
 
