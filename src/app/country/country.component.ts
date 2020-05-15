@@ -85,6 +85,7 @@ export class CountryComponent  {
     this.inform = []
     this.borders = []
     this.storageBolders = []
+    this.spinner.off=true
     this.router.navigate(["explore/only", name])
 
     
