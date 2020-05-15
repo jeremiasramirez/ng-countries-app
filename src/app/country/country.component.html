@@ -13,10 +13,17 @@
       
 
       <mat-list role="list">
-        <mat-list-item role="listitem">{{country.capital}}</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item role="listitem">{{country.subregion}}</mat-list-item>
-        <mat-divider></mat-divider> 
+
+        <div class="separateFlex">
+            <mat-list-item role="listitem">Capital</mat-list-item>
+            <mat-list-item role="listitem">{{country.capital}}</mat-list-item>
+         </div>
+         <div class="divider"></div>
+         <div class="separateFlex">
+            <mat-list-item role="listitem">Subregion</mat-list-item>
+            <mat-list-item role="listitem">{{country.subregion}}</mat-list-item>
+        </div>
+        <div class="divider"></div>
       </mat-list>
     </article>
 

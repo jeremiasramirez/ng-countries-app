@@ -14,11 +14,21 @@
   max-width: inherit;
 }
 
+.divider{
+  width: inherit;
+  border-bottom: 1px solid #dddd;
+  padding:0;
+}
 
 .img--only{
   width: 100%;
 }
 
+.separateFlex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .only--title{
   font-family: roboto;
