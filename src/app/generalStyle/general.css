@@ -19,12 +19,7 @@
   flex-wrap: wrap;
 
 }
-
-.buttonBack{
-  position: fixed;
-  bottom: 0;
-  margin: auto 40%;
-}
+ 
 
 .card--img{
   height: 200px;

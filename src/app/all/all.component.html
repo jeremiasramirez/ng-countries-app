@@ -10,13 +10,17 @@
 
 <section class="in responsiveCard ">
 
-  <div class="card inBottom" matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let card of countriesAll">
-    <div class="theme--blue-dark" style="width: 289px;  height=289px">
-        <p>{{ card.name }}</p>
-    </div>
+  <div class="card inBottom" matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let card of countriesAll">
+     
 
-        <img src={{card.flag}} alt="photo country" class="cardImage inBottom" style="width: 293px">
 
-  </div>
+  <mat-list>
+    <mat-list-item  >
+      <img matListAvatar src="{{card.flag}}" alt="{{ card.name}}">
+      <p matLine style="color:#222">
+        {{ card.name}}
+      </p>
+    </mat-list-item>
 
-</section>
+  </mat-list>
+ 

@@ -25,8 +25,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatRippleModule} from "@angular/material/core";
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { MatDividerModule } from '@angular/material/divider'
-
+import { MatListModule } from '@angular/material/list'
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -51,6 +51,7 @@ import { MatDividerModule } from '@angular/material/divider'
     ReactiveFormsModule ,
     FormsModule,
     MatDividerModule,
+    MatListModule,
     MatTooltipModule,
     MatSnackBarModule
   ],

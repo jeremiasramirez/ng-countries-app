@@ -1,4 +1,8 @@
 
+<div class="buttonBack inLeft">
+  <button type="button" mat-button name="button" matRipple  matRippleColor="orangered" class="btn--white min" (click)="explore()"  ><i class="fas fa-arrow-left"></i> Back</button>
+</div>
+
 <section class=" inBottom responsive inOut" *ngIf="spinner.off">
     <mat-spinner color="warn"></mat-spinner>
 </section>
@@ -41,11 +45,17 @@
 
 <section  class="responsiveCard"   *ngIf="!spinner3.off">
 
-  <article class="card inBottom minimum" matRipple *ngFor="let region of allCountryForCode.data" matRipple matRippleColor="rgba(0%, 0%, 0%, 30%)" (click)="goToCountry(region.name)">
-    <div class="theme--orange sizecard" >
-      <p>{{region.alpha2Code}}</p>
-    </div>
-
+  <article class="card inBottom " matRipple *ngFor="let region of allCountryForCode.data" matRipple matRippleColor="rgba(0%, 0%, 0%, 30%)" (click)="goToCountry(region.name)">
+ 
+      <mat-list>
+        <mat-list-item >
+          <img matListAvatar src="{{region.flag}}" alt="{{region.alpha2Code}}">
+          <p matLine style="color:#222">
+            {{region.alpha2Code}}
+          </p>
+        </mat-list-item>
+   
+      </mat-list>
   </article>
 
 
@@ -55,7 +65,3 @@
 
 
 
-
-<div class="buttonBack">
-  <button type="button" mat-button name="button" matRipple  matRippleColor="orangered" class="btn--white min" (click)="explore()"  ><i class="fas fa-arrow-left"></i> Back</button>
-</div>
