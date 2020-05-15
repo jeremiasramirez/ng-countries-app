@@ -56,7 +56,7 @@ export class ExploreComponent {
       this.theme.setColorTheme("theme--orange", "menu--orange");
       this.countryService.changeTextNamePage('Explore')
 
-      timer(100).subscribe(timing=>{
+      timer(200).subscribe(timing=>{
 
         this.openSnackBar('showing all regions', 'Ok')
 
@@ -66,8 +66,7 @@ export class ExploreComponent {
 
         this.setAllLanguages()
 
-        // this.setForCode()
-
+    
 
       })
 
