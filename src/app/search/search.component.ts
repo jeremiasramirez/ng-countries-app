@@ -47,7 +47,12 @@ export class SearchComponent {
   goExplore(){
     this.serv.goExplore()
   }
+  goToOnly(name:string){
 
+    this.router.navigate(["explore/only", name])
+
+
+  }
    spinnerTime(){
      this.spinner.off=true
 
@@ -69,15 +74,17 @@ export class SearchComponent {
    }
    keyupSearch(data:any=''){
        if (data.length >= 4){
+
       this.spinnerTime()
       this.spinner.off=true
       this.setNavigateData(data)
+     
 
 
 
 
      timer(3000).subscribe(timing=>{
-
+       
         // this.items = []
 
          this.serv.search(data).pipe(
