@@ -19,7 +19,7 @@ export class InitComponent  {
   }
 
   goHome(){
-    timer(400).subscribe(timing=>this.router.navigate(["home"]))
+    timer(400).subscribe(timing=>this.router.navigate(["explore"]))
   }
 
 

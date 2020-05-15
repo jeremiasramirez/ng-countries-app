@@ -24,7 +24,7 @@ const ROUTES : Routes = [
   {path: 'explore/only/:only', component: CountryComponent},
 
   {path: 'about', component: AboutComponent},
-  {path: '', component: ExploreComponent},
+  {path: '', component: InitComponent},
   {path: '**', component: InitComponent}
 
 ]

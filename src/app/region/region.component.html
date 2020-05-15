@@ -45,7 +45,7 @@
 
 <section  class="responsiveCard"   *ngIf="!spinner3.off">
 
-  <article class="card inBottom " matRipple *ngFor="let region of allCountryForCode.data" matRipple matRippleColor="rgba(0%, 0%, 0%, 30%)" (click)="goToCountry(region.name)">
+  <article class="card inBottom " matRipple *ngFor="let region of allCountryForCode.data" matRipple matRippleColor="rgba(0%, 0%, 0%, 30%)" (click)="goToOnly(region.alpha2Code)">
  
       <mat-list>
         <mat-list-item >
