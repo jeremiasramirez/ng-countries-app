@@ -60,7 +60,7 @@ export class CountryComponent  {
 
             for(let z=0; z<this.storageBolders.length; z+=1){    
              
-              ajax.get(`https://restcountries.eu/rest/v2/alpha/${this.storageBolders[z]}`).pipe(pluck('response')).subscribe(resp=>{
+              ajax.get(`https://restcountries.eu/rest/v2/alpha/${this.storageBolders[z]}`).pipe(pluck('response'),delay(2000)).subscribe(resp=>{
               
                 this.borders.push(resp);
 

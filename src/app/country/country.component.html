@@ -1,6 +1,10 @@
+ 
+  <section class=" inBottom responsive inOut" *ngIf="spinner.off">
+    <mat-spinner color="warn"></mat-spinner>
+</section>
 
  
-<div class="responsive" *ngIf="!spinner.off">
+<div class="responsive" *ngIf="!spinner.off && inform!==[]">
 
   <section  class="only--cards" >
 
@@ -80,13 +84,13 @@
 
 
     <section class="borders">
-      <h1 class="title text--white">Borders</h1>
-      <div class="card inBottom" matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let border of borders" (click)="goToOnly(card.alpha2Code)">
+      <h1 class="title text--white">Borders <span class="letter3 text--white">{{borders.length}}</span></h1>
+      <div class="card inBottom" matRipple  matRippleColor="rgba(80%, 10%, 0%, 80%)" *ngFor="let border of borders" (click)="goToOnly(card.alpha2Code)">
         
   
         
         <mat-list>
-          <mat-list-item  >
+          <mat-list-item  class="max">
             <img matListAvatar src="{{border.flag}}" alt="{{ border.name}}">
             <p matLine style="color:#222">
               {{ border.name}}
@@ -102,11 +106,7 @@
   </section>
 
 </div>
- 
-  <section class=" inBottom responsive inOut" >
-      <mat-spinner color="warn"></mat-spinner>
-  </section>
- 
+
 
  
 
