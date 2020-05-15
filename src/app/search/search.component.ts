@@ -4,6 +4,7 @@ import { timer } from 'rxjs'
 import { delay, sampleTime} from 'rxjs/operators'
 import { Router , ActivatedRoute} from '@angular/router'
 import { Theme } from "../services/theme.service";
+import { typeResponse } from '../typeResponse/type.response';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -18,7 +19,7 @@ export class SearchComponent {
   public form = {
     value : null
   }
-  public items : any[];
+  public items : typeResponse[];
 
 
   constructor(public serv:ServiceCountry, public router:Router,public par:ActivatedRoute, public theme:Theme) {

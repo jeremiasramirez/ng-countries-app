@@ -3,6 +3,7 @@ import { ServiceCountry } from "../services/service.country";
 import { timer } from 'rxjs'
 import { Theme } from "../services/theme.service";
 import { Router } from '@angular/router'
+import { typeResponse } from '../typeResponse/type.response';
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
@@ -13,7 +14,7 @@ export class AllComponent  {
    public spinner = {
      off: true
    }
-   public countriesAll : any[] = []
+   public countriesAll : typeResponse[] = []
   constructor(public countryService: ServiceCountry, public theme:Theme,public router:Router) {
     this.theme.setColorTheme("theme--blue-dark", "menu--blue-dark")
     this.countryService.changeTextNamePage('All')

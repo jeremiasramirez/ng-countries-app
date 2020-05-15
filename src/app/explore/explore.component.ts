@@ -9,6 +9,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import { timer,concat, Subject ,from} from "rxjs";
 import { delay,take } from "rxjs/operators";
 import { Router } from "@angular/router";
+import { typeResponse } from '../typeResponse/type.response';
 
 
 @Component({
@@ -25,13 +26,13 @@ import { Router } from "@angular/router";
 })
 export class ExploreComponent {
 
-  public allRegion: [];
+  public allRegion: typeResponse[];
 
-  public allLanguages : any[] = [];
+  public allLanguages : typeResponse[] = [];
 
-  public allContinent : [];
+  public allContinent : typeResponse[];
 
-  public forCode : any[] = [];
+  public forCode : typeResponse[] = [];
 
   public spinner = {
     off:true

@@ -4,7 +4,7 @@ import {Router} from "@angular/router"
 import { pluck,delay } from 'rxjs/operators'
 import { Theme } from "../services/theme.service";
 import { ServiceCountry } from "../services/service.country";
-
+import { typeResponse } from '../typeResponse/type.response'
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -21,7 +21,7 @@ export class CountryComponent  {
   }
   titleCountry: string = '......';
 
-  inform :any[]= []
+  inform :typeResponse[]= []
   constructor(public theme:Theme, public router:Router,public param:ActivatedRoute, public countryService:ServiceCountry) {
     
     this.inform = []
