@@ -10,7 +10,7 @@
 
 <section class="in responsiveCard ">
 
-  <div class="card inBottom" matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let card of countriesAll">
+  <div class="card inBottom" matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let card of countriesAll" (click)="goToOnly(card.alpha2Code)">
      
 
 

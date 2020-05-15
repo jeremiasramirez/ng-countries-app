@@ -2,6 +2,7 @@ import { Component  } from '@angular/core';
 import { ServiceCountry } from "../services/service.country";
 import { timer } from 'rxjs'
 import { Theme } from "../services/theme.service";
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
@@ -13,7 +14,7 @@ export class AllComponent  {
      off: true
    }
    public countriesAll : any[] = []
-  constructor(public countryService: ServiceCountry, public theme:Theme) {
+  constructor(public countryService: ServiceCountry, public theme:Theme,public router:Router) {
     this.theme.setColorTheme("theme--blue-dark", "menu--blue-dark")
     this.countryService.changeTextNamePage('All')
     timer(300).subscribe(timing=>this.chargedCountries())
@@ -29,7 +30,12 @@ export class AllComponent  {
     ()=>{this.spinner.off = false})
 
   }
+  goToOnly(name:string){
 
+    this.router.navigate(["explore/only", name])
+
+
+  }
 
 
 }

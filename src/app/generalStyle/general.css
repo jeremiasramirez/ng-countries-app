@@ -11,7 +11,9 @@
   background-color: #eee;
   color: #333;
 }
-
+.mat-list-item{
+  color: #222;
+}
 .responsiveCard{
 
   display: flex;
@@ -20,7 +22,9 @@
 
 }
  
-
+.buttonBack{
+  margin-bottom: -1em;
+}
 .card--img{
   height: 200px;
 }
