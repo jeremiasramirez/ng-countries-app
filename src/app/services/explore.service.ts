@@ -1,17 +1,15 @@
 import { Injectable } from "@angular/core"
 import { ajax } from 'rxjs/ajax'
 import { Router } from "@angular/router";
-import { pluck, sampleTime, delay } from 'rxjs/operators'
-import { timer } from 'rxjs'
+import { pluck, delay } from 'rxjs/operators'
+ 
 @Injectable()
 
 export class ExploreService{
 
   public urlAllRegion: string = 'assets/api/image-explore.json'
 
-  constructor(public router:Router){
-    
-  }
+  constructor(public router:Router){}
 
 
   public getAllRegion(){

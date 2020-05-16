@@ -6,7 +6,6 @@ import { LanguageService } from "../services/language.service";
 import { ExploreService } from "../services/explore.service";
 import { Theme } from "../services/theme.service";
 import { delay ,pluck, filter} from "rxjs/operators";
-import { ajax } from "rxjs/ajax";
 import { ServiceCountry } from "../services/service.country";
 
 @Component({
@@ -52,72 +51,74 @@ export class RegionComponent  {
     data: []
   }
 
-  constructor(public param:ActivatedRoute ,public continent:ContinentService,
-              public theme:Theme, public router:Router, public languages:LanguageService,
-              public explores:ExploreService,  public countryService:ServiceCountry) {
+  constructor(public param:ActivatedRoute,
+              public continent:ContinentService,
+              public theme:Theme,
+              public router:Router,
+              public languages:LanguageService,
+              public explores:ExploreService,
+              public countryService:ServiceCountry
+              ){
 
-    this.theme.setColorTheme("theme--orange", "menu--orange")
-    this.countryService.changeTextNamePage('Region');
-    this.param.params.subscribe(param=>{
+        this.theme.setColorTheme("theme--orange", "menu--orange")
+        this.countryService.changeTextNamePage('Region');
+        this.param.params.subscribe(param=>{
 
-      if(param.region == "code") {
+              if(param.region == "code") {
 
-        this.getAllCountryOfCode();
+                this.getAllCountryOfCode();
 
-      }else{
+              }else{
 
-        this.param.params.subscribe(data=>{this.params.data = data.region})
-        this.getAllCountryForLanguages();
-        this.getAllCountryOfContinents();
-        this.getAllContinentOfRegions();
+                this.param.params.subscribe(data=>{this.params.data = data.region})
+                this.getAllCountryForLanguages();
+                this.getAllCountryOfContinents();
+                this.getAllContinentOfRegions();
 
-      }
+              }
 
-    })
-
-
+        })
 
 
 
-  }
-  getAllCountryForLanguages(){
 
-      this.languages.getAllCountryForLanguage(this.params.data).pipe(delay(500)).subscribe(data=>{
-        this.allCountryOfContinent.data = data;
-      }, (err)=>{ return err}, ()=>{ this.spinner2.off=false;this.spinner.off=false })
 
   }
-  getAllCountryOfContinents(){
-    this.continent.getAllCountryOfContinent(this.params.data).pipe(delay(200)).subscribe(data=>{
+  public getAllCountryForLanguages(){
+
+    this.languages.getAllCountryForLanguage(this.params.data).pipe(delay(500)).subscribe(data=>{
       this.allCountryOfContinent.data = data;
+    }, (err)=>{ return err}, ()=>{ this.spinner2.off=false;this.spinner.off=false })
+
+  }
+  public getAllCountryOfContinents(){
+    this.continent.getAllCountryOfContinent(this.params.data).pipe(delay(200)).subscribe(data=>{
+    this.allCountryOfContinent.data = data;
 
     }, (err)=>{ return err}, ()=>{ this.spinner2.off=false;this.spinner.off=false })
 
   }
 
-  getAllCountryOfCode(){
+  public getAllCountryOfCode(){
+  
     this.explores.getAllForCode().pipe(delay(200)).subscribe(data=>{
-      this.allCountryForCode.data = data;
+    this.allCountryForCode.data = data;
     }, (err)=>{ return err}, ()=>{ this.spinner3.off=false;this.spinner.off=false;this.spinner2.off=false })
 
   }
 
-  goToOnly(name:string){
-
+  public goToOnly(name:string){
     this.router.navigate(["explore/only", name])
-
-
   }
 
-  getAllContinentOfRegions(){
+  public getAllContinentOfRegions(){
+  
     this.continent.getAllContinentOfRegion(this.params.data).pipe(delay(200)).subscribe(data=>{
       this.allCountryOfRegion.data = data;
-
     }, (err)=>{return err}, ()=>{this.spinner.off=false;this.spinner2.off=false})
 
-
   }
-  explore(){
+  public explore(){
    this.router.navigate(["explore"]);
   }
 

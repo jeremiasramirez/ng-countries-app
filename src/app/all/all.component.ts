@@ -4,25 +4,37 @@ import { timer } from 'rxjs'
 import { Theme } from "../services/theme.service";
 import { Router } from '@angular/router'
 import { typeResponse } from '../typeResponse/type.response';
+
+
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
-  styleUrls: ['./all.component.css','../generalStyle/general.css'],
-  providers: [ServiceCountry,Theme]
+  styleUrls: [
+    './all.component.css',
+    '../generalStyle/general.css'
+  ],
+  providers: [
+    ServiceCountry,
+    Theme
+  ]
 })
 export class AllComponent  {
-   public spinner = {
+  //properties 
+  public spinner = {
      off: true
    }
-   public countriesAll : typeResponse[] = []
+
+  public countriesAll : typeResponse[] = []
+
   constructor(public countryService: ServiceCountry, public theme:Theme,public router:Router) {
+    
     this.theme.setColorTheme("theme--blue-dark", "menu--blue-dark")
     this.countryService.changeTextNamePage('All')
     timer(300).subscribe(timing=>this.chargedCountries())
 
   }
 
-  chargedCountries(){
+ public chargedCountries(){
 
     this.countryService.getAllCountry().subscribe((resp)=>{
       this.countriesAll = resp
@@ -31,7 +43,7 @@ export class AllComponent  {
     ()=>{this.spinner.off = false})
 
   }
-  goToOnly(name:string){
+  public goToOnly(name:string){
 
     this.router.navigate(["explore/only", name])
 

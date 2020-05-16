@@ -6,10 +6,8 @@ import { delay,pluck } from "rxjs/operators";
 export class LanguageService{
   public urlForLanguages : string = "assets/api/language.json"
   public urlCountryForLanguages : string = "https://restcountries.eu/rest/v2/lang/"
-  constructor(){
 
-  }
-
+  
   getAllForLanguages(){
      return ajax.get(this.urlForLanguages).pipe(delay(10),pluck('response'))
   }
