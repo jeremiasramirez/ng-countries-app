@@ -7,13 +7,6 @@
     <mat-spinner color="warn"></mat-spinner>
 </section>
 
-<section class=" inBottom responsive inOut" *ngIf="spinner2.off">
-    <mat-spinner color="warn"></mat-spinner>
-</section>
-
-<section class=" inBottom responsive inOut" *ngIf="spinner3.off">
-    <mat-spinner color="warn"></mat-spinner>
-</section>
 <section  class="responsiveCard" *ngIf="!spinner.off">
 
   <article class="card inBottom" matRipple matRipple matRippleColor="rgba(80%, 10%, 0%, 50%)" *ngFor="let region of allCountryOfRegion.data" (click)="goToOnly(region.alpha2Code)">

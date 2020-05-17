@@ -22,6 +22,7 @@
 .img--only{
   /*max-width: 600px;*/
   max-width: 100%;
+  margin-left:-5px;
 }
 .max{
   width: 310px;;

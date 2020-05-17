@@ -7,6 +7,7 @@ import { ExploreService } from "../services/explore.service";
 import { Theme } from "../services/theme.service";
 import { delay ,pluck, filter} from "rxjs/operators";
 import { ServiceCountry } from "../services/service.country";
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-region',
@@ -119,8 +120,12 @@ export class RegionComponent  {
 
   }
   public explore(){
-   this.router.navigate(["explore"]);
+    
+   timer(100).subscribe(()=>{
+    this.router.navigate(["explore"]);
+   })
+   
   }
 
-
+  
 }
