@@ -38,6 +38,6 @@
     transform: scale(0);
   }
     to{
-      transform: scale(.5);
+      transform: scale(.4);
     }
 }
