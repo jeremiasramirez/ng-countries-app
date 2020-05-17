@@ -67,17 +67,15 @@ export class CountryComponent  {
                 this.countryService.changeTextNamePage(this.titleCountry)
 
               }
-  
            
           }
-
 
             for(let k=0; k<this.inform[0].borders.length; k+=1){
               this.storageBolders.push(this.inform[0].borders[k])
             }
 
             for(let z=0; z<this.storageBolders.length; z+=1){    
-             
+          
               ajax.get(`https://restcountries.eu/rest/v2/alpha/${this.storageBolders[z]}`).pipe(pluck('response'),delay(2000)).subscribe(resp=>{
               
                 this.borders.push(resp);
@@ -85,10 +83,7 @@ export class CountryComponent  {
               })  
  
             }
-             
-
-        
-         
+          
 
       }, (err)=>{return err}, ()=>{this.spinner.off=false})
 
