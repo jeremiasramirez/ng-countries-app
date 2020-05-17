@@ -24,6 +24,10 @@ export class AllComponent  {
      off: true
    }
 
+  public dataStart : number=0;
+  public dataEach : number=10;
+  public dataEnd : number=this.dataEach;
+
   public countriesAll : typeResponse[] = []
 
   constructor(public countryService: ServiceCountry, public theme:Theme,public router:Router) {
@@ -49,6 +53,7 @@ export class AllComponent  {
 
 
   }
+  
 
 
 }
