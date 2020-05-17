@@ -17,7 +17,7 @@
     <mat-spinner></mat-spinner>
 </section>
 
-<div class="alert--await inBottom min" *ngIf="items && !spinner.off">
+<div class="alert--await inBottom min" *ngIf="form.value && !spinner.off">
   Results {{ items.length }} <i class="fas fa-check-circle resetIcon inLeft"></i>
 </div>
 
@@ -43,6 +43,6 @@
 
 </section>
 
-<div class="responsiveCard inBottom"  *ngIf="!form.value && !spinner.off">
-  <button (click)="goExplore()" type="button" mat-flat-button matRipple  matRippleColor="rgba(0%, 10%, 80%, 30%)"  name="button">Explore <i class="fas fa-ellipsis-h"></i></button>
+<div class="responsiveCard inBottom" *ngIf="!form.value || spinner.off" >
+  <button (click)="goExplore()" type="button" mat-flat-button matRipple  matRippleColor="rgba(0%, 10%, 80%, 30%)" class="btn--white" name="button">Explore <i class="fas fa-ellipsis-h"></i></button>
 </div>
