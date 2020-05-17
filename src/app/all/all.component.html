@@ -8,19 +8,31 @@
     <mat-spinner></mat-spinner>
 </section>
 
-<section class="in responsiveCard ">
+<section class="responsiveCard ">
 
-  <div class="card inBottom" matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let card of countriesAll | slice:dataStart:dataEnd" (click)="goToOnly(card.alpha2Code)">
+  <div class="card inLeft" matRipple matRippleColor="rgba(0%, 10%, 80%, 50%)" *ngFor="let card of countriesAll | slice:dataStart:dataEnd" (click)="goToOnly(card.alpha2Code)">
      
 
 
   <mat-list>
     <mat-list-item  >
-      <img matListAvatar src="{{card.flag}}" alt="{{ card.name}}">
+      <img matListAvatar class="in" src="{{card.flag}}" alt="{{ card.name}}">
       <p matLine style="color:#222">
         {{ card.name}}
       </p>
     </mat-list-item>
-
-  </mat-list>
  
+  </mat-list>
+</div>
+ </section>
+  
+ <div class="responsive in" *ngIf="!spinner.off">
+    <p class="title">{{dataStart+10}} - {{dataPageLength}}</p>
+  </div>
+
+
+  <div class="responsivePaginationButton in" *ngIf="!spinner.off">
+    <button (click)="back()" class="btn--red" >  <i class="fas fa-arrow-left resetIcon"></i> Back </button>
+  
+    <button (click)="next()" class="btn--blue"> Next <i class="fas fa-arrow-right resetIcon"></i>  </button>
+  </div>
