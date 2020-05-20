@@ -75,7 +75,9 @@ export class SearchComponent {
 
    public setSearchAutomation(name:string=''){
      if (name != ''){
-       this.keyupSearch(name);
+    
+        this.keyupSearch(name);   
+       
      }
      else{
        this.form.value =null
@@ -83,7 +85,10 @@ export class SearchComponent {
    }
 
    public setNavigateData(data:string=''){
-     this.router.navigate(["search", data])
+      
+      this.router.navigate(["search", data])
+     
+     
    }
 
    public keyupSearch(data:any=''){
@@ -93,7 +98,7 @@ export class SearchComponent {
         this.spinner.off=true
         this.setNavigateData(data)
       
-        timer(3000).subscribe(timing=>{
+        timer(5000).subscribe(timing=>{
 
             this.serv.search(data).pipe(
 

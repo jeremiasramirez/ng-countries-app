@@ -20,7 +20,7 @@
 
 
         <div class="separateFlex" *ngIf="country.nativeName">
-          <mat-list-item role="listitem">Native name</mat-list-item>
+          <mat-list-item class="strong" role="listitem">Native name</mat-list-item>
           <mat-list-item role="listitem">{{country.nativeName}}</mat-list-item>
            
        </div>
@@ -28,14 +28,14 @@
 
 
         <div class="separateFlex" *ngIf="country.capital">
-            <mat-list-item role="listitem">Capital</mat-list-item>
+            <mat-list-item class="strong" role="listitem">Capital</mat-list-item>
             <mat-list-item role="listitem">{{country.capital}}</mat-list-item>
              
          </div>
          <div class="divider" *ngIf="country.capital"></div>
 
          <div class="separateFlex" *ngIf="country.region">
-          <mat-list-item role="listitem">Region</mat-list-item>
+          <mat-list-item class="strong" role="listitem">Region</mat-list-item>
           <mat-list-item role="listitem">{{country.region}}</mat-list-item>
         </div>
       <div class="divider" *ngIf="country.region"></div>
@@ -43,35 +43,35 @@
          
 
          <div class="separateFlex" *ngIf="country.subregion">
-            <mat-list-item role="listitem">Subregion</mat-list-item>
+            <mat-list-item class="strong" role="listitem">Subregion</mat-list-item>
             <mat-list-item role="listitem">{{country.subregion}}</mat-list-item>
         </div>
         <div class="divider" *ngIf="country.subregion"></div>
 
 
         <div class="separateFlex" *ngIf="country.area">
-          <mat-list-item role="listitem">Area</mat-list-item>
+          <mat-list-item class="strong" role="listitem">Area</mat-list-item>
           <mat-list-item role="listitem">{{country.area}}</mat-list-item>
         </div>
       <div class="divider" *ngIf="country.area"></div>
 
 
       <div class="separateFlex" *ngIf="country.currencies[0].code">
-        <mat-list-item role="listitem">Currencies</mat-list-item>
+        <mat-list-item class="strong" role="listitem">Currencies</mat-list-item>
         <mat-list-item role="listitem">{{country.currencies[0].code}}</mat-list-item>
       </div>
      <div class="divider" *ngIf="country.currencies[0].code"></div>
 
 
         <div class="separateFlex" *ngIf="country.callingCodes">
-          <mat-list-item role="listitem">Calling code</mat-list-item>
+          <mat-list-item class="strong" role="listitem">Calling code</mat-list-item>
           <mat-list-item role="listitem">+{{country.callingCodes[0]}}</mat-list-item>
       </div>
       <div class="divider" *ngIf="country.callingCodes"></div>
 
 
       <div class="separateFlex" *ngIf="country.timezones[0]">
-        <mat-list-item role="listitem">Time zones</mat-list-item>
+        <mat-list-item class="strong" role="listitem">Time zones</mat-list-item>
         <mat-list-item role="listitem">+{{country.timezones[0]}}</mat-list-item>
     </div>
     <div class="divider" *ngIf="country.timezones[0]"></div>
@@ -79,7 +79,7 @@
 
 
     <div class="separateFlex" *ngIf="country.translations.es">
-      <mat-list-item role="listitem">Translation</mat-list-item>
+      <mat-list-item class="strong" role="listitem">Translation</mat-list-item>
       <mat-list-item role="listitem">{{country.translations.es}}</mat-list-item>
     </div>
   <div class="divider" *ngIf="country.translations.es"></div>
@@ -87,14 +87,14 @@
 
 
       <div class="separateFlex" *ngIf="country.numericCode">
-        <mat-list-item role="listitem">Numeric code</mat-list-item>
+        <mat-list-item class="strong" role="listitem">Numeric code</mat-list-item>
         <mat-list-item role="listitem">{{country.numericCode}}</mat-list-item>
       </div>
     <div class="divider" *ngIf="country.numericCode"></div>
 
 
       <div class="separateFlex" *ngIf="country.population">
-        <mat-list-item role="listitem">Population</mat-list-item>
+        <mat-list-item class="strong" role="listitem">Population</mat-list-item>
         <mat-list-item role="listitem">{{country.population | number}}</mat-list-item>
     </div>
     <div class="divider" *ngIf="country.population"></div>
@@ -114,7 +114,7 @@
         
         <mat-list>
           <mat-list-item  class="max">
-            <img matListAvatar class="in" src="{{border.flag}}" alt="{{ border.name}}">
+            <img matListAvatar class="in"  src="{{border.flag}}" alt="{{ border.name}}">
             <p matLine style="color:#222">
               {{ border.name}}
             </p>
