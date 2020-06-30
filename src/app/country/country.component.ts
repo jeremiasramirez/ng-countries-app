@@ -62,7 +62,7 @@ export class CountryComponent  {
             
             if (data[i].alpha2Code==name){
             
-              this.inform.unshift(data[i]);console.log(this.inform)
+              this.inform.unshift(data[i]);
                 this.titleCountry = this.inform[0].name
                 this.countryService.changeTextNamePage(this.titleCountry)
 

@@ -4,6 +4,9 @@
 mat-form-field {
   margin-right: 12px;
 }
+.card--img{
+  max-width: 500px;
+}
 .card--explore{
   height: 60px;
   width: 99%;

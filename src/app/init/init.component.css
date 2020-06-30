@@ -3,6 +3,7 @@
   top:0;
   padding-top: 3em;
   width: 100vw;
+  padding-left: -9px;
   overflow: hidden;
   height: 100%;
   background-color: darkblue;
@@ -11,5 +12,6 @@
 .img--svg{
   transform: scale(.8);
   width: 800px;
-  margin-left: -10px;
+  max-width: 800px;
+  margin-left: -20px;
 }

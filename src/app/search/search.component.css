@@ -7,4 +7,6 @@
 }
 input{
     height: 40px;
+    border:none;
+    background-color: rgb(229, 236, 236);
 }
